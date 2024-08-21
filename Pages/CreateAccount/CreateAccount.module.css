@@ -1,0 +1,524 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+   position: static;
+}
+
+h5 {
+    margin-bottom: 0px;
+}
+
+.birthSectionAllInputs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.postFormContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-inline: 20px;
+    align-items: center;
+    width: -webkit-fill-available;
+ }
+
+ .nav p {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: black;
+ }
+
+ .outerCard {
+     width: 500px;
+     margin-inline: auto
+ }
+
+ .Heading {
+    font-size: 48px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+ }
+ 
+ .Subeading {
+    font-size: 17px;
+    font-weight: 400;
+    color: #6f78a4;
+    display: flex;
+    justify-content: center;
+    margin-block: 10px 20px;
+ }
+
+ .top {
+   width: 230px;
+   display: flex;
+   margin-inline: auto;
+   margin-block: 60px 30px;
+ }
+
+ form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .formBody {
+    background-color: white;
+    width: 600px;
+    padding: 56px 48px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+ }
+
+ .infoText {
+   color: gray;
+   font-weight: 400;
+   font-size: 15px;
+   padding-bottom: 5px;
+   /* max-width: 300px; */
+   margin-inline: auto;
+   margin-bottom: 20px;
+   text-align: center;
+ }
+
+ .titles {
+    color: gray;
+    font-weight: 700;
+    font-size: 13px;
+ }
+
+ .fieldSet { 
+    height: 100px;
+    min-height: auto;
+ }
+
+ .inputField {
+     border: 2px solid #b9bfc8;
+     border-radius: 4px;
+     width: 100%;
+     padding: 0.8rem 0.6rem;
+     font-size: 16px;
+ }
+
+ .inputField:focus {
+     border: 2px solid black;
+     border-radius: 4px;
+     width: 100%;
+     padding: 0.8rem 0.6rem;
+     font-size: 16px;
+ }
+ 
+ .inputFieldErrorBefore {
+     border: 2px solid #b9bfc8;
+     border-radius: 4px;
+     width: 100%;
+     padding: 0.8rem 0.6rem;
+     font-size: 16px;
+}
+
+.inputFieldError {
+   border: 1px solid #cc000d;
+   outline: 1px solid #cc000d;
+   border-radius: 4px;
+   width: 100%;
+   padding: 0.8rem 0.6rem;
+   font-size: 16px;
+}
+
+.monthField {
+     flex-basis: 40%;
+     background-color: white;
+     background-image: url('/src/assets/images/dropdown dropdown-arrow.png');
+     background-repeat: no-repeat;
+     background-position: right 10px center;
+     background-size: 8px 4px;
+     border: 2px solid #b9bfc8;
+     border-radius: 4px;
+     padding: 0.8rem 0.6rem;
+     font-size: 16px;
+     text-align: left;
+}
+
+.monthFieldError {
+   border: 2px solid #cc000d;
+   border-radius: 4px;
+}
+
+.monthOptions {
+   background-color: white;
+   color: black;
+   z-index: 2
+}
+
+ul li {
+   list-style: none;
+}
+
+.dayField,
+.yearField {
+   flex-basis: 30%;
+   background-color: white;
+   background-image: url('/src/assets/images/dropdown dropdown-arrow.png');
+   background-repeat: no-repeat;
+   background-position: right 10px center;
+   background-size: 8px 4px;
+   border: 2px solid #b9bfc8;
+   border-radius: 4px;
+   padding: 0.8rem 0.6rem;
+   font-size: 16px;
+   text-align: left;
+}
+
+.genderField {
+   flex-basis: 100%;
+   background-color: white;
+   background-image: url('/src/assets/images/dropdown dropdown-arrow.png');
+   background-repeat: no-repeat;
+   background-position: right 10px center;
+   background-size: 8px 4px;
+   border: 2px solid #b9bfc8;
+   border-radius: 4px;
+   padding: 0.8rem 0.6rem;
+   font-size: 16px;
+   text-align: left;
+}
+
+
+ .birthInfo, .genderInfo {
+    color: gray;
+    font-weight: 700;
+ }
+
+ .emailError,
+ .passwordError,
+ .nameError,
+ .zipcodeError,
+ .genderError {
+    margin: -10px 0px 10px 0px;
+    display: none;
+    transition: 0.3s;
+ }
+
+ .emailErrorActive,
+ .passwordErrorActive,
+ .nameErrorActive,
+ .zipcodeErrorActive,
+ .genderErrorActive {
+    display: flex;
+    margin: 5px 0px 10px 0px;
+ }
+
+ .emailErrorActiveBefore,
+ .passwordErrorBefore,
+ .nameErrorActiveBefore,
+ .zipcodeErrorActiveBefore,
+ .genderErrorActiveBefore
+  {
+   margin: -10px 0px 10px 0px;
+   display: none;
+   transition: 0.3s;
+ }
+
+ .errorIcon {
+    width: 14px;
+    margin-right: 5px;
+}
+
+/* .allContainer {
+   position: relative;
+} */
+
+ .errorMsg {
+     font-size: 12px;
+     color: #cc000d;
+ }
+
+ .titlesWithIcon {
+      display: flex;
+ }
+
+ .infoIcon {
+   width: 18px;
+   margin-left: 5px;
+ }
+
+ .emailGrp, .passwordGrp, .nameGrp, .birthdateSection {
+    margin-bottom: 30px;
+    position: relative;
+ }
+
+ .monthFieldContainer {
+     flex-basis: 40%;
+ }
+
+ .dayFieldContainer {
+     flex-basis: 30%;
+ }
+
+ .yearFieldContainer {
+     flex-basis: 30%;
+ }
+
+ /* MONTH TOGGLE STATES  */
+
+ ul {
+    padding: 0px;
+ }
+
+ .monthList {
+     overflow-y: auto;
+     max-height: 200px;
+     border: 2px solid #c2c7cf;
+     width: 202px;
+     box-sizing: border-box;
+     display: none;
+     background-color: white;
+ }
+
+ .monthListActive {
+     display: inline-block;
+     position: absolute;
+     overflow-y: auto;
+     max-height: 200px;
+     border: 2px solid #c2c7cf;
+     width: 202px;
+     box-sizing: border-box;
+     background-color: white;
+     width: 194px;
+ }
+
+ .monthListActive li {
+     list-style: none;
+     padding: 5px 15px;
+     font-size: 14px;
+     letter-spacing: 0.3px;
+ }
+
+ .monthListActive li:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+ }
+
+
+ /* DAYS TOGGLE STATES  */
+ .daysList {
+     overflow-y: auto;
+     max-height: 200px;
+     border: 2px solid #c2c7cf;
+     width: 124px;
+     box-sizing: border-box;
+     display: none;
+     background-color: white;
+ }
+
+ .daysListActive {
+     display: inline-block;
+     position: absolute;
+     overflow-y: auto;
+     max-height: 200px;
+     border: 2px solid #c2c7cf;
+     width: 145px;
+     box-sizing: border-box;
+     background-color: white;
+ }
+
+ .daysListActive li {
+     list-style: none;
+     padding: 5px 15px;
+     font-size: 14px;
+     letter-spacing: 0.3px;
+ }
+
+ .daysListActive li:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+ }
+
+
+ /* YEARS TOGGLE STATES  */
+ .yearList {
+     overflow-y: auto;
+     max-height: 200px;
+     border: 2px solid #c2c7cf;
+     width: 136px;
+     box-sizing: border-box;
+     display: none;
+     background-color: white;
+ }
+
+ .yearListActive {
+      display: inline-block;
+      position: absolute;
+      overflow-y: auto;
+      max-height: 200px;
+      border: 2px solid #c2c7cf;
+      width: 145px;
+      box-sizing: border-box;
+      background-color: white;
+ }
+
+ .yearListActive li {
+     list-style: none;
+     padding: 5px 15px;
+     font-size: 14px;
+     letter-spacing: 0.3px;
+ }
+
+ .yearListActive li:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+ }
+
+ .genderList {
+     border: 2px solid #c2c7cf;
+     display: none;
+     background-color: white;
+ }
+
+ .genderListActive {
+      display: inline-flex;
+      flex-direction: column;
+      border: 2px solid #c2c7cf;
+      box-sizing: border-box;
+      width: 100%;
+      background-color: white;
+ }
+
+ .genderListActive li {
+     list-style: none;
+     padding: 5px 15px;
+     font-size: 14px;
+     letter-spacing: 0.3px;
+ }
+
+ .genderListActive li:hover {
+     background-color: black;
+     color: white;
+     cursor: pointer;
+ }
+
+ .extraInfo {
+    color: #636e85;
+    font-size: 13px;
+    width: 550px;
+    text-align: center;
+    margin-inline: auto;
+    padding-top: 40px;
+    line-height: 22px;
+ }
+
+ .extraInfo2 {
+    color: #636e85;
+    font-size: 13px;
+    width: 523px;
+    text-align: center;
+    margin-inline: auto;
+    padding-bottom: 40px;
+    line-height: 22px;
+ }
+
+ /* .submitBtn {
+    color: #dde0e6;
+    background-color: #b9bfc8;
+    border: none;
+    border-radius: 5px;
+    padding-block: 14px;
+    padding-inline: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    width: 400px;
+    margin-inline: 560px;
+    margin-bottom: 100px;
+    display: inline;
+ } */
+
+ .links {
+    display: flex;
+    color: #6e768b;
+    font-size: 15px;
+    margin-inline: 250px;
+    width: 1000px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+ }
+
+ a {
+    cursor: pointer;
+    text-decoration: none;
+    color: royalblue;
+ }
+
+ ::placeholder {
+    font-size: 17px;
+    color: black;
+ }
+
+ .error-msg {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    position: absolute;
+    /* bottom: 7px; */
+    opacity: 0;
+    transition: all 0.3s;
+ }
+
+ .error-msg.active {
+    bottom: -20px;
+    opacity: 1;
+    transition: all 0.3s;
+ }
+
+ .continueBtn {
+   color: #b7bdc7ff;
+   background-color: #8f9196ff;
+   border: none;
+   border-radius: 5px;
+   padding-block: 14px;
+   padding-inline: 40px;
+   font-size: 15px;
+   font-weight: 700;
+   letter-spacing: 1.7px;
+   max-width: 400px;
+   width: 100%;
+   display: inline;
+   text-align: center;
+   margin: 0px 0px 85px 0px;
+   pointer-events: none;
+}
+
+.continueBtnActive {
+   color: white;
+   background-color: #272c35;
+   border: none;
+   border-radius: 5px;
+   padding-block: 14px;
+   padding-inline: 40px;
+   font-size: 15px;
+   font-weight: 700;
+   letter-spacing: 1.7px;
+   max-width: 400px;
+   width: 100%;
+   display: inline;
+   text-align: center;
+   margin: 0px 0px 85px 0px;
+   pointer-events: all;
+}

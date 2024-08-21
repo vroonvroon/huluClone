@@ -1,0 +1,195 @@
+.linkSections {
+    width: auto;
+    padding-right: 50px
+}
+
+.linkHeader {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 14px;;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(88, 97, 116);
+    padding-bottom: 86px;
+    border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
+}
+
+.quick-links p {
+    margin-bottom: 7px;
+}
+
+.listofsublinks {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.sublinks {
+    list-style: none;
+    margin-bottom: 10px;
+    /* width: 100px; */
+    /* line-height: 1; */
+}
+
+.subsublinksGrp {
+    float: right;
+}
+
+.linkgrp {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.accordianArrow {
+    display: none;
+}
+
+.linkSections {
+     width: auto;
+     padding-right: 50px;
+}
+
+.sectionContainer {
+    display: flex;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .sectionContainer {
+        display: block
+    }
+
+    .linkSections  {
+        padding: 0;
+    }
+
+    .listofsublinks {
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .sectionContainer {
+        display: flex
+    }
+
+    .linkSections {
+        width: 240px;
+    }
+    
+    .linkHeader {
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 14px;;
+    }
+    
+    .quickLinks {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: rgb(88, 97, 116);
+        padding-bottom: 86px;
+        border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
+    }
+    
+    .quick-links p {
+        margin-bottom: 7px;
+    }
+
+    .listofsublinks {
+        display: block;
+        flex-direction: column;
+    }
+
+    .sublinks {
+        list-style: none;
+        margin-bottom: 10px;
+        width: auto;
+        margin-right: 30px;
+        /* line-height: 1; */
+    }
+
+    .subsublinksGrp {
+        width: 100%;
+    }
+
+    .linkgrp {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .accordianArrow {
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .sectionContainer {
+        display: flex;
+    }
+
+    .linkSections {
+        width: auto;
+        padding-right: 50px
+    }
+    
+    .linkHeader {
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 14px;;
+    }
+    
+    .quicklinks {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: rgb(88, 97, 116);
+        padding-bottom: 86px;
+        border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
+    }
+    
+    .quicklinks p {
+        margin-bottom: 7px;
+    }
+
+    .listofsublinks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sublinks {
+        list-style: none;
+        margin-bottom: 10px;
+        width: 100px;
+        /* line-height: 1; */
+    }
+
+    .subsublinksGrp {
+        float: right;
+    }
+
+    .linkgrp {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .accordianArrow {
+        display: none;
+    }
+
+    .linkSections {
+         width: auto;
+         padding-right: 50px
+    }
+
+}

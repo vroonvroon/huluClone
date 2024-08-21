@@ -1,0 +1,168 @@
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pill {
+    background-color: #00ED82;
+    border-radius: 50px;
+    padding: 5px 10px;
+    color: black;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    visibility: visible;
+}
+
+.nopill {
+    visibility: hidden;
+}
+
+.plansHeading {
+    color: white;
+    font-size: 10px; 
+    font-weight: 700; 
+    letter-spacing: 0.9px;
+    padding-top: 24px;
+}
+
+.plansSubheading {
+    font-size: 13px; 
+  /* font-weight: 400; */
+}
+
+.PriceButton {
+    /* width: 200px; */
+    height: 54px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: white;
+    margin-top: 14px;
+    transition: 0.2s;
+    border: none;
+    border-radius: 5px;
+}
+
+.planText {
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.plans {
+    width: 100%;
+    text-align: center;
+}
+
+.plans > * {
+    width: fit-content;
+}
+
+.planLogo {
+    width: 180px;
+    height: 42px;
+}
+
+.PriceButton {
+    height: 54px;
+    width: 200px;
+    font-size: 15px;
+}
+
+.FX2PriceButton {
+    width: 200px;
+    font-size: 15px;
+    height: 54px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: black;
+    color: #fff;
+    margin-top: 14px;
+    transition: 0.2s;
+    border: none;
+    border-radius: 5px;
+}
+
+.planText {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .plans {
+        width: 100%;
+        text-align: center;
+    }
+
+    .PriceButton {
+        height: 54px;
+        width: 200px;
+        
+    }
+
+    .planText {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .plans {
+        width: 100%;
+        text-align: center;
+        padding: 0px 10px;
+        border-inline-end: 1px solid rgb(89, 89, 89);
+        padding-block: 30px;
+    }
+
+    .PriceButton {
+        height: 54px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .planText {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .planLogo {
+        width: 140px;
+        height: 35px
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    
+    .plans {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .PriceButton {
+        height: 54px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .planText {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .planLogo {
+        width: 70px;
+        height: 20px;
+    }
+    
+}

@@ -1,0 +1,37 @@
+.logoutcontainer {
+    position: relative;
+}
+
+.name {
+    /* color: #a8afbd; */
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    padding-inline: 20px;
+    cursor: pointer;
+}
+
+.userOptions {
+    position: absolute;
+    top: 50px;
+    /* left: -100px; */
+    background-color: rgb(72, 72, 72);
+    color: white;
+    width: 150px;
+    /* padding: 12px 20px; */
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.mamu>li {
+    padding: 7px 20px;
+}
+
+.littleMamus {
+    color: #a8afbd;
+}
+
+.name + .userOptions>ul {
+    cursor: pointer;
+}

@@ -1,0 +1,163 @@
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 75px;
+    /* display: flex; */
+    /* overflow-x: hidden; */
+}
+
+.OuterCarousel {
+    position: relative;
+}
+
+.innercarouselContainer {
+    display: flex;
+    margin-top: 75px;
+    overflow-x: hidden;
+}
+
+.slideImgContentContainer {
+    width: 100%;
+}
+
+.carouselFrame {
+    width: 100%;
+    display: flex;
+    /* overflow-x: hidden; */
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out all;
+}
+
+.slide {
+    /* position: relative;
+    height: 500px;
+    width: 100%;
+    display: block; */
+    /* overflow: hidden; */
+    transform: scale(0.95);
+    transition:  transform 0.3s;
+}
+
+.slideActive {
+    /* position: relative;
+    height: 500px;
+    width: 100%;
+    display: block; */
+    /* overflow: hidden; */
+    transform: scale(1);
+    transition: 0.7s ease-in-out all;
+}
+
+.carouselImgBox {
+    /* width: 100%; */
+    height: 500px;
+    /* position: absolute; */
+}
+
+.carouselImg {
+    /* position: absolute;
+    width: 100%; */
+    height: 100%;
+    /* width: 100%; */
+    object-fit: cover;
+    /* transition: 0.5s linear all;
+    transform: scale(1); */
+}
+
+.activeCarouselImg {
+    height: 100%;
+    /* width: 100%; */
+    object-fit: cover;
+}
+
+.slideContentActive {
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 13%;
+    opacity: 1;
+    transition: 0.7s ease-out all;
+}
+
+.slideContent {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    z-index: 100;
+    opacity: 0;
+    transition-delay: 10ms;
+}
+
+.indicators {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    margin-right: 15px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.indicatorActive {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 15px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.arrowLeft {
+    position: absolute;
+    margin-left: 50px;
+    cursor: pointer;
+    left: 1rem;
+    top: 50%;
+    z-index: 1;
+}
+
+.arrowRight {
+    position:absolute;
+    margin-right: 50px;
+    cursor: pointer;
+    right: 1rem;
+    top: 50%;
+}
+
+
+.heroLabel {
+    width: 155px;
+    filter: brightness(100);
+}
+
+.streaming {
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+}
+
+/* @keyframes carouselAnimation {
+    0% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.025)
+    }
+} */

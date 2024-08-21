@@ -1,0 +1,197 @@
+/* //TIMELINE NAV BOXES  */
+
+.timeline {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+.timelineBoxIndicatorsGrp {
+    position: relative;
+    display: flex;
+    padding-left: 82px;
+    margin-right: 100px;
+}
+
+.frameContainer {
+    display: flex;
+    gap: 24px;
+}
+
+.frame {
+    /* border: 1px solid red; */
+    /* position: absolute; */
+    top: -64px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     /* marginRight: '16px', */
+}
+
+.yearBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -40px;
+    visibility: hidden;
+    justify-content: center;
+    /* opacity: 0; */
+    transition: 0.2s ease-in-out; 
+}
+
+.ActiveYearBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -40px;
+    visibility: visible;
+    justify-content: center;
+}
+
+.years {
+    padding: 2px 8px 8px;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    background-color: #555 ;
+    color: white;
+    border-radius: 7px;
+    transition: all 0.2s ease-in-out;
+}
+
+.smallTri {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #555;
+}
+
+.timeboxContainer  {
+    position: absolute;
+    align-items: center;
+    display: flex;
+}
+
+.timelineBox {
+    background-color: black;
+    width: 17px;
+    display: flex;
+    height: 17px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+} 
+
+.activeTimelineNav {
+    background-color: #1ce882;
+    width: 17px;
+    display: flex;
+    height: 17px;
+}
+
+.selectedTimelineNav {
+    background-color: #1ce882;
+    width: 17px;
+    display: flex;
+    height: 17px;
+}
+
+
+
+/* // SLIDES STYLE STARTS HERE  */
+.timelineContent {
+    margin-top: 70px;
+    transition: 1s;
+    overflow-x: hidden;
+}
+
+.slides {
+    display: flex;
+    height: 425px;
+    width: 1290px;
+    /* position: relative; */
+    transition: 0.3s ease-in-out all;
+}
+
+.content {
+    display: flex;
+    margin-inline: 100px;
+    /* position: absolute;  */
+    /* justify-content: space-around;
+    padding-top: 100px;
+    padding-inline: 120px;
+    width: 1290px;
+    height: 320px;    
+    margin-left: 100px;*/
+    
+}
+
+.contentActive {
+    display: flex;
+    margin-inline: 100px;
+    /* position: absolute;  */
+    /* justify-content: space-around;
+    padding-top: 100px;
+    padding-inline: 120px;
+    position: absolute; 
+    width: 1290px;
+    height: 320px;    
+    margin-left: 100px; */
+}
+
+.slides {
+    display: flex;
+    height: 425px;
+    /* width: 1290px; */
+}
+
+.timelineContentImgs {
+    /* position: relative; */
+    width: 575px;
+    height: 323px;
+}
+
+.contenttext {
+    margin-left: 30px;
+    width: 400px;
+    margin-right: 85px;
+}
+
+.year {
+    padding: 8px 0px;
+    color: black;
+    font-size: 28px;
+    font-weight: 800;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.previousChevron {
+    background-color: white;
+    border-radius: 50px;
+    padding: 15px 18px;
+    box-shadow: 7px 4px 13px -4px #8888884f;
+    position: absolute;
+    left: 0px;
+    top: 50%;;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.nextChevron {
+    background-color: white;
+    border-radius: 50px;
+    padding: 15px 18px;
+    box-shadow: 7px 4px 13px -4px #8888884f;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    cursor: pointer;
+}

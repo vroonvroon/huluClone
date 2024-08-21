@@ -1,0 +1,226 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 50px 0px;
+ }
+
+ .sub {
+   color: #00ED82;
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 0.7px;
+   text-align: center;
+ }
+ 
+ .header {
+   font-size: 46px;
+   font-weight: 700;
+   color: white;
+   max-width: fit-content;
+ }
+ 
+ .headerInfo {
+   color: white;
+   font-size: 19px;
+   font-weight: 400;
+   padding-top: 15px;
+   width: 810px;
+   text-align: center;
+   letter-spacing: 0.5px;
+ }
+
+.gridWindow:hover {
+    border: 4px solid gray;
+    cursor: pointer;
+    border-radius: 17px;
+}
+
+.gridWindow {
+   position: relative;
+   width: fit-content;
+   height: fit-content;
+   padding: 4px;
+   border: 4px solid #0b0c0f63;
+   transition: 0.2s;
+}
+
+.gridImg {
+   height: 427px;
+   width: 279px;
+   border-radius: 10px;
+   position: relative;
+}
+
+.gridContainer {
+   /* padding: 0px 10px 60px 10px; */
+   margin-inline: auto;
+   max-width: 1150px;
+}
+
+.tvLove {
+   display: grid;
+   grid-template-columns: 320px 320px 320px 320px;
+   row-gap: 10px;
+   /* max-width: 786px; */
+   /* margin-inline: auto; */
+   justify-content: center;
+}
+
+.moreInfo {
+   font-size: 10px;
+   color: white;
+   display: flex;
+   justify-content: end;
+}
+
+.title {
+   font-size: 17px;
+   font-weight: 500;
+}
+
+.title2 {
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+/* // SMALL LAPTOP  */
+@media (min-width: 1024px) and (max-width: 1439px) {
+   
+   .headerInfo {
+      font-size: 19px;
+      line-height: 1.3;
+      letter-spacing: 0;
+      padding-top: 0px;
+      width: 70vw;
+   }
+
+   .gridContainer {
+      padding: 0px 10px 60px 10px;
+   }
+
+   .tvLove {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+      max-width: 786px;
+      margin-inline: auto;
+      justify-content: center;
+   }
+
+   .gridImg {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+/* // PADS  */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+   .header {
+      font-size: 32px;
+      margin-block: 10px;
+   }
+
+   .headerInfo {
+      font-size: 17px;
+      line-height: 1.3;
+      letter-spacing: 0;
+      padding-top: 0px;
+      width: 80vw;
+   }
+   
+   .gridContainer {
+      padding: 0px 10px 60px 10px;
+   }
+
+   .tvLove {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+      max-width: 786px;
+      margin-inline: auto;
+      justify-content: center;
+   }
+
+   .gridImg {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+/* // MOBILES  */
+@media (min-width: 320px) and (max-width: 767px) {
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0px;
+      max-width: 300px;
+      margin-inline: auto;
+    } 
+
+   .sub {
+      font-size: 12px;
+   }
+
+   .header {
+      font-size: 32px;
+      margin-block: 10px;
+   }
+
+   .headerInfo {
+      font-size: 17px;
+      line-height: 1.3;
+      letter-spacing: 0;
+      padding-top: 0px;
+      width: 100vw;
+   }
+
+   .gridContainer {
+      padding: 0px 10px 60px 10px;
+   }
+
+   .tvLove {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+      max-width: 786px;
+      margin-inline: auto;
+      justify-content: center;
+   }
+
+   .gridImg {
+      width: 100%;
+      height: 100%;
+   }
+
+   .title {
+      font-size: 15px;
+      font-weight: 400;
+      max-width: 60px;
+      line-height: 1.2;
+   }
+   
+   .title2 {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.2;
+   }
+   
+ }
+ 

@@ -1,0 +1,9 @@
+.headerPillNoshow,
+.linkInactive {
+    visibility: hidden;
+}
+
+.headerPillShow,
+.link {
+    visibility: visible;
+}

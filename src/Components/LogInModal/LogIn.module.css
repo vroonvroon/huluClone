@@ -1,0 +1,234 @@
+
+.modalContainer {
+    position: fixed; 
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    visibility: visible;
+  }
+  
+  .pressLogInModal {
+    background-color: white;
+    width: 80%;
+    max-width: 1000px;
+    margin: 70px auto;
+    z-index: 200;
+    color: black;
+  }
+  
+  .modal p {
+     padding: 0px 60px;
+     font-size: 17px;
+     line-height: 18px;
+  }
+  
+  .modal span {
+     color: #176ee1;
+  }
+  
+  .innerModal {
+     /* padding: 32px 32px 32px 32px; */
+     display: flex;
+     /* justify-content: flex-end; */
+  }
+
+  .inputSection {
+      display: grid;
+      gap: 30px;
+      margin: 30px 0px;
+  }
+
+  .LogInSection {
+     width: 700px;
+     padding: 80px 80px 80px 80px;
+     text-align: center;
+     border-right: 1px solid lightgray;
+  }
+
+  .finePrint {
+      font-size: 11px;
+  }
+
+  .LoginText {
+     font-size: 26px;
+     font-weight: 800;
+  }
+
+  .emailSec {
+     position: relative;
+  }
+
+  .emailLabel {
+      position: absolute;
+      bottom: 7px;
+      transition: 0.15s ease-in-out;
+      margin-left: 10px;
+      padding: 0px 2px;
+      font-size: 17px;
+      color: gray;
+  }
+
+  .emailLabelActive {
+      position: absolute;
+      bottom: 30px;
+      background-color: white;
+      transition: 0.15s ease-in-out;
+      margin-left: 10px;
+      padding: 0px 5px;
+      font-size: 17px;
+  }
+
+  .emailInput {
+      width: 100%;
+      padding: 7px 10px;
+  }
+
+  .emailActive {
+      border: 1px solid #1ce882;
+      outline: 1px solid #1ce882;
+      width: 100%;
+      padding: 7px 10px;
+}
+
+  .passwordSec {
+      position: relative;
+  }
+ 
+  .createAccountSection {
+      /* width: 400px; */
+      padding: 30px 30px 30px 30px;
+      text-align: center;
+  }
+
+  .greenContainer {
+      background-color: #1ce882;
+      /* width: 300px; */
+  }
+  
+  .modalContainer.show {
+     visibility: visible;
+  }
+  
+  .close {
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+ }
+
+ .getStartedButton {
+    padding: 4px 70px;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    background-color: white;
+    border: 2px solid black;
+    transition: 0.3s linear;
+ }
+ 
+
+ .logInButton {
+   padding: 4px 70px;
+   letter-spacing: 0.7px;
+   font-weight: 700;
+   background-color: black;
+   color: white;
+   border: none;
+   transition: 0.3s linear;
+ }
+
+ .logInButton:hover {
+   padding: 4px 70px;
+   letter-spacing: 0.7px;
+   font-weight: 700;
+   background-color: #1ce882;
+   color: black;
+   border: none;
+ }
+ 
+ .createAccountMain {
+     margin-block: 80px;
+     padding-inline: 30px;
+ }
+
+ .link {
+   margin-top: 80px;
+ }
+
+ .toAccount {
+   font-weight: 800;
+   margin-top: 10px;
+   color: black;
+   transition: 0.1s ease-in-out;
+ }
+
+ .toAccount:hover {
+   color: gray;;
+ }
+
+ .inputOuter {
+    width: 100%;
+    border: 1px solid #686868;
+    height: 40px;
+    align-items: center;
+ }
+
+ .inputOuterActive {
+   width: 100%;
+   border: 1px solid #686868;
+   height: 40px;
+   border: 1px solid #1ce882;
+   outline: 1px solid #1ce882;
+ }
+
+ .passwordInput {
+    width: 100%;
+    padding: 7px 10px;
+ }
+
+ .passwordActive {
+   width: 100%;
+   padding: 7px 10px;
+   border: 1px solid #1ce882;
+   outline: 1px solid #1ce882;
+}
+
+ .passwordLabel {
+   position: absolute;
+   left: 0px;
+   bottom: 7px;
+   color: gray;
+   font-size: 17px;
+   margin-left: 10px;
+   transition: 0.15s ease-in-out;
+ }
+
+ .passwordLabelActive {
+   position: absolute;
+   left: 0px;
+   bottom: 30px;
+   color: black;
+   background-color: white;
+   transition: 0.15s ease-in-out;
+   margin-left: 10px;
+   padding: 0px 5px;
+   font-size: 17px;
+ }
+
+ .showHide {
+   position: absolute;
+   right: 0px;
+   height: 100%;
+   top: 7px;
+   margin-right: 10px;
+   color: black;
+   cursor: pointer;
+ }
+
+ .passwordInput:focus ~ .passwordLabel {
+     color: black;
+     background-color: white;
+     padding: 0px 5px;
+     transform: translateY(-24px);
+ }

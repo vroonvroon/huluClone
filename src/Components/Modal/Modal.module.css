@@ -1,0 +1,45 @@
+
+.modalContainer {
+    position: fixed; 
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    visibility: visible;
+  }
+  
+  .modal {
+    background-color: white;
+    width: 80%;
+    max-width: 930px;
+    margin: 70px auto;
+    padding-bottom: 40px;
+    z-index: 200;
+  }
+  
+  .modal p {
+     padding: 0px 60px;
+     font-size: 17px;
+     line-height: 18px;
+  }
+  
+  .modal span {
+     color: #176ee1;
+  }
+  
+  .modalHeader {
+     padding: 32px 32px 0px 32px;
+     display: flex;
+     justify-content: flex-end;
+  }
+  
+  .modalContainer.show {
+     visibility: visible;
+  }
+  
+  #close {
+    cursor: pointer;
+ }
+ 

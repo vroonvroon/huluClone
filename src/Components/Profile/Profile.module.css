@@ -1,0 +1,149 @@
+.profileBack {
+    background: linear-gradient(330.57deg, rgb(24, 57, 73) 0.29%, rgb(4, 4, 5) 90.62%);
+    /* height: 100vh; */
+    padding-bottom: 50px;
+}
+
+.header_Card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profileCard {
+    background-color: white;
+    padding: 56px 72px;
+    border-radius: 12px;
+    border: none;
+    /* width: 580px; */
+}
+
+.fieldSet {
+    margin-bottom: 20px;
+}
+
+.inputFieldErrorBefore {
+    border: 2px solid #b9bfc8;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0.8rem 0.6rem;
+    font-size: 16px;
+}
+
+.buttons {
+    color: white;
+    background-color: #272c35;
+    border: none;
+    border-radius: 5px;
+    padding-block: 14px;
+    padding-inline: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-align: center;
+    pointer-events: all;
+ }
+
+/* // MODAL // */
+
+.modalContainer {
+    position: fixed; 
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    z-index: 100;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.2s ease-in-out;
+}
+  
+.modal {
+    background-color: white;
+    width: 80%;
+    max-width: 930px;
+    margin: 70px auto;
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.confirmHeader {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.confirmText {
+    font-size: 16px;
+    text-align: center;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.actionButton {
+    color: white;
+    background-color: #272c35;
+    border: none;
+    border-radius: 5px;
+    padding-block: 14px;
+    padding-inline: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    text-align: center;
+    pointer-events: all;
+    transition: 0.1s linear;
+}
+
+.actionButton:hover {
+    color: #272c35;
+    background-color: white;
+    outline: 2px solid #272c35;
+    border-radius: 5px;
+    padding-block: 14px;
+    padding-inline: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-align: center;
+    pointer-events: all;
+    transition: 0.1s linear;
+}
+
+.confirmButtonYes {
+    color: white;
+    background-color: #d72923;
+    border: none;
+    border-radius: 5px;
+    padding-block: 14px;
+    padding-inline: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    text-align: center;
+}
+
+.confirmButton {
+    color: #272c35;
+    background-color: white;
+    border: 2px solid #272c35;
+    border-radius: 5px;
+    padding-block: 14px;
+    padding-inline: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    text-align: center;
+}

@@ -1,0 +1,583 @@
+    
+    .disect {
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+
+    .tabActive {
+        color: white;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+
+    .ContentContainer {
+        position: absolute;
+    }
+
+    .sliderContainer {
+        padding: 0px 0px;
+        display: flex;
+        width: 100%;
+        height: 1000px;
+        margin-inline: 0 auto;
+        max-height: 702px;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .image2 {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0px -350px;
+    }
+
+    .sliderContainer_ContentGrp {
+        position: absolute;
+        padding: 150px 240px;
+        display: block;
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    .flexSlider {
+        display: flex;
+        height: 100%;
+        width: 400px;
+        position: absolute;
+    }
+
+    .tab {
+        display: flex;
+        width: 370px;
+        justify-content: space-between;
+        z-index: 300;
+    }
+
+    .slidecontent {
+        position: absolute;
+        height: 100%;
+        margin-top: 160px;
+        opacity: 0;
+        z-index: 200;
+        text-align: center;
+        display: none;
+        transition: all 0.3s ease-in;
+    }
+
+    .slidecontentActive {
+        display: block;
+        position: absolute;
+        margin-top: 80px;
+        height: fit-content;
+        opacity: 1;
+        z-index: 200;
+        text-align: left;
+        padding: 0px 0px;
+    }
+
+    .my-transition-enter {
+        opacity: 0;
+      }
+      
+    .my-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+    }
+    
+    .my-transition-exit {
+    opacity: 1;
+    }
+    
+    .my-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+    }
+
+    .description {
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        /* margin-inline: auto;
+        max-width: 600px; */
+    }
+
+    .channelinfoGrp {
+        display: flex;
+        justify-content: left;
+        margin-block: 20px;
+    }
+
+    .restrictions {
+        font-size: 11px;
+        width: 100%;
+    }
+     
+    /* // THIS IS THE OLD STYLES FROM HERE ON  */
+
+.slideOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: linear-gradient(to right, #00000075, transparent);
+  z-index: 199;
+}
+
+
+ .tab p:hover {
+      cursor: pointer;
+      opacity: 0.8;
+ }
+ 
+ .underline {
+     position: absolute;
+     left: 0px; 
+     width: 85px;
+     height: 5px;
+     background-color: white;
+     margin-block: 25px;
+     transition: all 0.3s;
+     z-index: 600
+ }
+
+.SlideContainerActive {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* z-index: 2; */
+}
+
+.SlideContainer {
+    /* position: absolute; */
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* z-index: 1 */
+    transition: 0.5s all;
+}
+
+.slides {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: 0px 0px;
+   display: block;
+}
+
+.image2 {
+    display: none;
+}
+
+/* .slidecontent {
+    content-visibility: hidden;
+    opacity: 0;
+    z-index: 200;
+    transition: all 0.5s;
+}
+
+.slidecontentActive {
+    position: absolute;
+    content-visibility: visible;
+    opacity: 1;
+    z-index: 200;
+} */
+
+.description{
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.7px;
+}
+  
+.contentActive {
+     content-visibility: visible;
+     transition: 0.9s;
+     top: 0px;
+     opacity: 1;
+     z-index: 200;
+}
+
+.channelsList {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    margin-block: 24px;;
+}
+
+.channelinfoGrp {
+    /* position: relative; */
+    top: 470px;
+    left: 260px;
+    width: 100%;
+ }
+ 
+ .channelImg {
+    height: 25px;
+    margin: 15px 5px;
+ }
+ 
+
+.channelBackground {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+}
+
+.restrictions {
+    font-size: 10px;
+    color:rgba(255, 255, 255, 0.4)
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+       
+    .disect {
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+
+    .tabActive {
+        color: white;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+
+    .sliderContainer {
+        padding: 0px 0px;
+        display: flex;
+        width: 100%;
+        height: 1000px;
+        margin-inline: 0 auto;
+        max-height: 702px;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .image2 {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0px -350px;
+    }
+
+    .sliderContainer_ContentGrp {
+        position: absolute;
+        padding: 120px 120px;
+        display: block;
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    .flexSlider {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        margin-inline: auto;
+        justify-content: center;
+        /* position: absolute; */
+        top: 0px;
+        left: 0px;
+    }
+
+    .tab {
+        margin-inline: auto;
+        display: flex;
+        width: 370px;
+        justify-content: space-between;
+        z-index: 300;
+    }
+
+    .slidecontent {
+        position: absolute;
+        height: 100%;
+        content-visibility: visible;
+        opacity: 1;
+        z-index: 200;
+        text-align: center;
+        display: none;
+    }
+
+    .slidecontentActive {
+        display: block;
+        position: absolute;
+        margin-top: 80px;
+        height: fit-content;
+        content-visibility: visible;
+        opacity: 1;
+        z-index: 200;
+        text-align: left;
+        padding: 0px 0px;
+    }
+
+    .description {
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        /* margin-inline: auto;
+        max-width: 600px; */
+    }
+
+    .channelinfoGrp {
+        display: flex;
+        justify-content: left;
+        margin-block: 20px;
+    }
+
+    .restrictions {
+        font-size: 11px;
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+    .disect {
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .tabActive {
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .image {
+        display: none;
+    }
+ 
+    .image2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sliderContainer {
+        padding: 0px 0px;
+        display: flex;
+        width: 100%;
+        height: 1000px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .image2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0px -350px;
+    }
+
+    .sliderContainer_ContentGrp {
+        position: absolute;
+        padding: 30px 0px;
+        display: block;
+        width: 100%;
+    }
+
+
+    .flexSlider {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        margin-inline: auto;
+        justify-content: center;
+        /* position: absolute; */
+        top: 0px;
+        left: 0px;
+    }
+
+    .tab {
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        top: 0px;
+        left: 0px;
+        z-index: 300;
+    }
+
+    .slidecontent {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        content-visibility: visible;
+        opacity: 1;
+        z-index: 200;
+        text-align: center;
+        display: none;
+    }
+
+    .slidecontentActive {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content-visibility: visible;
+        opacity: 1;
+        z-index: 200;
+        text-align: center;
+        padding: 60px 0px;
+        margin-top: 80px;
+    }
+
+    .description {
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding-inline: 20px;
+        margin-inline: auto;
+        max-width: 600px;
+    }
+
+    .channelinfoGrp {
+        display: flex;
+        justify-content: center;
+        margin-block: 20px;
+    }
+
+    .restrictions {
+        font-size: 11px;
+        width: 100%;
+    }
+ 
+
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .sliderContainer {
+        padding: 0px 0px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .image2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sliderContainer_ContentGrp {
+        position: absolute;
+        padding: 30px 0px;
+        display: block;
+        width: 100%;
+    }
+
+
+    .flexSlider {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        margin-inline: auto;
+        justify-content: center;
+        /* position: absolute; */
+        top: 0px;
+        left: 0px;
+    }
+
+    .tab {
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        z-index: 300;
+    }
+
+    .slidecontent {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 100%;
+        content-visibility: visible;
+        opacity: 1;
+        z-index: 200;
+        text-align: center;
+        display: none;
+    }
+
+    .slidecontentActive {
+        display: block;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 100%;
+        content-visibility: visible;
+        opacity: 1;
+        z-index: 200;
+        text-align: center;
+    }
+
+    .description {
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        max-width: 100vw;
+        line-height: 1;
+        letter-spacing: 0.2px;
+        padding-inline: 20px;
+    }
+
+    .channelinfoGrp {
+        display: flex;
+        justify-content: center;
+    }
+
+    .restrictions {
+        font-size: 11px;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+
+}

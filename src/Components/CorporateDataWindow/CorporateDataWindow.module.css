@@ -1,0 +1,89 @@
+.box {
+    opacity: 1;
+    transition: 0.8s ease-out;
+    display: flex;
+}
+
+.boxesImg {
+    width: 282px;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* .counterInfo {
+    margin-left: 20px;
+    padding-top: 10px;
+} */
+
+.counterInfo {
+    overflow: hidden;
+    max-height: 95px;
+}
+
+.numbersOnly {
+    display: flex;
+}
+
+.numbersOnly>*{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.numbersOnly>p {
+    font-size: 50px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.actualShizz>p {
+    font-size: 50px;
+    font-weight: 800;
+    /* animation: rollUp 1.2s ease-out forwards; */
+}
+
+
+.numbercounter {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.boxesContent {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    width: 240px;
+}
+
+.rollingNumbers {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.subscribers {
+    width:auto;
+    height: auto;
+}
+
+.subscribers>p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.animate {
+    animation: animateOpacity 1.2s ease-out forwards;
+    transition: 1.2s ease-out;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+  @keyframes animateOpacity {
+    0% {
+      opacity: 0;
+      transform: translateY(30%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+

@@ -1,0 +1,21 @@
+.links {
+    display: flex;
+    font-size: 13px;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.links p {
+    font-size: 13px;
+}
+
+.extraLinks {
+display: flex;
+margin-left: 10px;
+align-items: center;
+}
+
+.extraLinks p {
+margin-right: 10px;
+font-size: 13px;
+}

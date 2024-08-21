@@ -1,0 +1,33 @@
+.questionsFont{
+    font-size: 18px;
+}
+
+.qHeader{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 10px;
+    cursor: pointer;
+    width: 100%;
+    color:black;
+}
+
+.content{
+    color: rgb(88, 97, 116);
+    font-size: 17px;
+    border-bottom: 0.5px solid rgba(211, 211, 211, 0.366);
+    max-height: auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.qHeader.active + .content{
+    max-height: 1000px;
+    overflow: visible;
+    padding: 0px 0px 30px 0px;
+}
+
+.expand.active{
+     content:'';
+     background: url(images/icon_round_minus.png);
+}

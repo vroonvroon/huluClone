@@ -1,0 +1,33 @@
+.channelsList {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    margin-block: 24px;;
+}
+
+.channelinfoGrp {
+    position: relative;
+    top: 470px;
+    left: 260px;
+    width: 100%;
+ }
+ 
+  .channelImg{
+    position: absolute; 
+    top: 470px;
+    left: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+    padding-top: 30px;
+ } 
+ 
+
+.channelBackground {
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    width: 48px;
+    height: 48px;
+}

@@ -1,0 +1,95 @@
+
+.plan {
+    background-color: #f7f7faff;
+}
+
+.ActivePlanSection {
+    display: flex;
+}
+
+.InactivePlanSection {
+    display: none;
+}
+
+.cardDimensions1,
+.cardDimensions2,
+.cardDimensions3,
+.cardDimensions4 {
+    width: 350px;
+}
+
+.cardDimensions1,
+.cardDimensions3 {
+    box-shadow: -7px 3px 15px #00000021;
+}
+
+.cardcontainer {
+    margin-bottom: 100px;
+}
+
+.cardDimensions2,
+.cardDimensions4 {
+    box-shadow: 5px 6px 15px #00000021;
+}
+
+
+.plansText {
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+    /* marginLeft: '30px' */
+}
+
+.plansTextInactive {
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #b7bdc7;
+    cursor: pointer;
+    /* marginLeft: '30px' */
+}
+
+.greenStripe {
+    width: 100%;
+    background-color: #28a868;
+    height: 5px;
+    top: 0px;
+    display: flex;
+    position: absolute;
+}
+
+.plans {
+    width: fit-content;
+    border-bottom: 1px solid lightgray;
+}
+
+.navbar {
+   padding: 0px;
+   margin: 0px;
+   background-color: white;
+   height: 60px;
+   padding-inline: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+}
+
+.slider {
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 0px;
+    width: 130px;
+}
+
+.sliderMove {
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
+    width: 156px;
+}

@@ -1,0 +1,44 @@
+.box {
+    opacity: 1;
+    transition: 0.8s ease-out;
+    display: flex;
+}
+
+.boxesImg {
+    width: 282px;
+    height: 210px;
+    object-fit: cover;
+}
+
+.counterInfo {
+    overflow: hidden;
+    max-height: 95px;
+}
+
+.numbersOnly {
+    display: flex;
+}
+
+
+.numbersOnly>p {
+    font-size: 50px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.TVShizz>p, .Episodeshizz>p {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.numbercounter {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.boxesContent {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    width: 240px;
+}
