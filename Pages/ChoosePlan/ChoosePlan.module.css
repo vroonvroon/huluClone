@@ -38,7 +38,6 @@
     font-weight: 700;
     font-size: 15px;
     color: black;
-    /* marginLeft: '30px' */
 }
 
 .plansTextInactive {
@@ -47,7 +46,6 @@
     font-size: 15px;
     color: #b7bdc7;
     cursor: pointer;
-    /* marginLeft: '30px' */
 }
 
 .greenStripe {

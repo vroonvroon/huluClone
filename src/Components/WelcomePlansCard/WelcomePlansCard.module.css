@@ -2,6 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-inline: 7px;
+    width: 365px;
+}
+
+.plans2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 30px;
+    padding-inline: 10px;
+}
+
+.plansColor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 10px;
+    background-color: #f5f6f7;
+}
+
+.plans2Color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 30px;
+    padding-inline: 14px;
+    background-color: #f5f6f7;
 }
 
 .pill {
@@ -28,8 +55,7 @@
 }
 
 .plansSubheading {
-    font-size: 13px; 
-  /* font-weight: 400; */
+    font-size: 18px; 
 }
 
 .PriceButton {
@@ -61,7 +87,7 @@
 
 
 
-@media (min-width: 1023px) and (max-width: 1439px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
 
     .PriceButton {
         width: 100%;
@@ -74,13 +100,21 @@
         border: none;
         border-radius: 5px;
     }
+
+    .plans {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 7px;
+        width: 330px;
+    }
 }
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
     .plans {
-        padding: 30px 0px;
+        padding: 30px 14px;
         width: 100vw;
     }
 
@@ -114,8 +148,8 @@
     .PriceButton {
         width: 100%;
         height: 48px;
-        font-size: 16px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 600;
         background-color: white;
         margin-top: 14px;
         transition: 0.2s;
@@ -123,5 +157,10 @@
         border-radius: 5px;
         margin: 0px 0px;
     }
+
+    .plansSubheading {
+        font-size: 12px; 
+    }
+    
 
 }

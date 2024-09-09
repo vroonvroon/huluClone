@@ -1,6 +1,3 @@
-import greencheck from '/src/assets/images/Pricing_Checkmark_green-light.svg'
-import infoIcon from '/src/assets/images/Info_Icon_White.svg'
-
 export const AddOnData2 = [
     {
         id: 1,

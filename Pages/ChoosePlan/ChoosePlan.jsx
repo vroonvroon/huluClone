@@ -4,8 +4,6 @@ import PlanCard from "../../src/Components/PlanCard";
 import styles from './ChoosePlan.module.css';
 import { ChooseYourPlanHeading } from "../../src/Components/h1/h1";
 import { Link } from 'react-router-dom'
-import { RadioForPlans, RadioLabelForPlans } from "../../src/Components/Inputs/Inputs";
-import info from '/src/assets/images/info-icon.svg'
 import huluDisneyEspn from '/src/assets/images/hulu-disney-espn.svg'
 
 
@@ -45,17 +43,6 @@ const Plan = () => {
             <div className="plan-change position-relative d-flex justify-content-center">
                 <div className={`${styles.plans} d-flex justify-content-center gap-4 pb-3 px-3`}>
                 <span className={`position-absolute ${changePlan === 2 ? styles.sliderMove : styles.slider}`}></span>
-
-                    
-                
-                    {/* <RadioForPlans id='base plan' name='plans' value="option1" checked={selected === "option1"} onChange={handleChange} disabled={selected === "option2"}/>
-                    <RadioLabelForPlans htmlFor="base plan" className= {`${styles.plansText} ${changePlan ? styles.plansTextInactive : ''}`}  onClick={() => togglePlans()}> BASE PLAN</RadioLabelForPlans>
-                  
-                    <RadioForPlans id='bundle plan' name='plans' value="option2" checked={selected === "option2"} onChange={handleChange} disabled={selected === "option1"}/>
-                    <RadioLabelForPlans htmlFor="bundle plan" className={`${styles.plansTextInactive} ${changePlan ? styles.plansText : ''}`}  onClick={() => togglePlans()}>BUNDLE / SAVE</RadioLabelForPlans> */}
-
-            
-                    
                     <p className={changePlan === 1 ? styles.plansText : styles.plansTextInactive} onClick={() => togglePlans(1)}>BASE PLANS</p>
                     <p className={changePlan === 2 ? styles.plansText : styles.plansTextInactive} onClick={() => togglePlans(2)}>BUNDLE / SAVE</p>
                 </div>
@@ -65,7 +52,6 @@ const Plan = () => {
 
             {/* <!-- SECTION TO BE CHANGED FROM HERE --> */}
 
-            {/* <div className="container mt-1 mb-5"> */}
                <div className={`${styles.cardcontainer} d-flex justify-content-center`}> 
                
                <div className={changePlan === 1 ? styles.ActivePlanSection : styles.InactivePlanSection}>
@@ -87,13 +73,6 @@ const Plan = () => {
                 </div>
 
               </div>
-
-
-              {/* <div className={styles.info} style={{display: 'flex', width: '600px', marginInline: 'auto', marginBlock: '20px'}}>
-                <p style={{color: '#6f78a4', fontSize: '12px'}}>A few excluded shows play with ads. &nbsp;</p> 
-                <img src={info} alt=""/>
-              </div> */}
-            {/* </div>  */}
 
 
 

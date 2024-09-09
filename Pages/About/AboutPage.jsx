@@ -1,5 +1,4 @@
-import React, { useRef, useState, createContext } from 'react'
-import logo from '/src/assets/images/Hulu-Logo.png'
+import React, { useRef, useState } from 'react'
 import styles from './About.module.css'
 import Navbar from '../../src/Components/Navbar/Navbar'
 import abtusHulu from '/src/assets/images/abtus-hulu.webp'

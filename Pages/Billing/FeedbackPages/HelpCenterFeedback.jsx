@@ -201,55 +201,6 @@ const [showAcknowledgement, setShowAcknowledgement] = useState(false);
             })}
         </div>
         </div>
-        
-        {/* <div className='d-flex justify-content-center mb-4'>
-            <div class={styles.stars}>
-            {starContainer.map((star, index) => {
-                return (
-                    <div className={styles.starsBox}>
-                        {clickedStar > index || hoveredStar >= index ? (<img src={star.img2} onClick={() => clickHandler(index)} onMouseOver={() => hoverHandler(index)} onMouseOut={() =>hoverOutHandler(null)}/>)
-                        : 
-                        (<img src={star.img} onClick={() => clickHandler(index)} onMouseOver={() => hoverHandler(index)} onMouseOut={() =>hoverOutHandler(null)}/>)
-                        }
-                    
-                        {clickedStarText === index || hoveredStarText ===  index ? (<p className={styles.starTextActive}>
-                            <i>{star.text}</i>
-                        </p>)
-                        :
-                        (<p className={styles.starText}>
-                            <i>{star.text}</i>
-                        </p>)
-                        }
-                    </div>
-                );
-            })}
-            </div>
-        </div> */}
-
-
-        {/* <div className='d-flex justify-content-center mb-4'>
-            <div class={styles.stars}>
-            {starContainer.map((star, index) => {
-                return (
-                    <div className={styles.starsBox}>
-                        {clickedStar >= index || hoveredStar >= index ? (<img src={star.img2} onClick={() => clickHandler(index)} onMouseOver={() => hoverHandler(index)} onMouseOut={() =>hoverOutHandler(null)}/>)
-                        : 
-                        (<img src={star.img} onClick={() => clickHandler(index)} onMouseOver={() => hoverHandler(index)} onMouseOut={() =>hoverOutHandler(null)}/>)
-                        }
-                    
-                        {clickedStarText === index || hoveredStarText ===  index ? (<p className={styles.starTextActive}>
-                            <i>{star.text}</i>
-                        </p>)
-                        :
-                        (<p className={styles.starText}>
-                            <i>{star.text}</i>
-                        </p>)
-                        }
-                    </div>
-                );
-            })}
-            </div>
-        </div> */}
 
     {/* STARS RATING SECTION ENDS*/}
 
@@ -278,10 +229,10 @@ const [showAcknowledgement, setShowAcknowledgement] = useState(false);
 
         {/* // PAGE 2 // */}            
     {page === 2 && <section id={styles.page2}>
-      <div >
+      <div>
         <p className={styles.page1Question}>What was the primary purpose for today's visit?</p>
 
-        <div className={null}>
+        <div>
                 <select value={page2option} name="" id={errorMessage2 ? styles.feedTopicError : styles.feedTopic} style={{width: '100%', fontSize: '13px', padding: '4px 5px'}} onChange={page2OptionChanger}>
                     <option value="0" className={styles.feedOptions}>Please choose one...</option>
                     <option value="1" className={styles.feedOptions}>Cancel Hulu</option>
@@ -295,6 +246,7 @@ const [showAcknowledgement, setShowAcknowledgement] = useState(false);
                 {errorMessage2 && <p className={styles.errorText}>Complete this field.</p>}
         </div>
 
+    <div style={{marginTop: '20px'}}>
         <p className={styles.page1Question}>Were you able to complete your primary purpose today?</p>
         <div class={styles.radioButtons}>
             <input className={styles.purposeStatus} type="radio" name="purpose" id='yes' onChange={handleRadioChange} /> 
@@ -308,6 +260,7 @@ const [showAcknowledgement, setShowAcknowledgement] = useState(false);
             <input className={styles.purposeStatus} type="radio" name="purpose" id="still" onChange={handleRadioChange} />
             <label htmlFor="still">Still Working</label>
         </div>
+    </div>
 
         <button className={button2 ? styles.nextBtnActive : styles.nextBtn} onClick={openNextPage}>NEXT</button>
 

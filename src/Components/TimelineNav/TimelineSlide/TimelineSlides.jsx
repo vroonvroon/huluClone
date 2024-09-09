@@ -23,15 +23,8 @@ const TimelineSlides = () => {
     ]
 
     // TO SET THE SAME SLIDE CORRESPONDING TO THE TIMELNE BOXES
-    // const [currentslide, setCurrentSlide] = useState(0);
-
     // Show Year on hover
     const [activeTimelineNav, setActiveTimelineNav] = useState(0);
-  
-    // Set timeline on click
-    // const [selectedYear, setSelectedYear] = useState(1);
-    // THE SECTION FOR TIMELINE NAVIGATION BOXES ENDS HERE 
-
 
  
     // THE SECTION FOR TIMELINE SLIDES STARTS HERE 
@@ -54,12 +47,8 @@ const TimelineSlides = () => {
         }
         setSlide(newSlide);
         sliderRef.current.style.transform = `translateX(${-(100 * newSlide)}%)`;
-      };
+    };
 
-    // const previousSlide = () => {
-    //     setSlide((slide) % data.length);
-    //     sliderRef.current.style.transform = `translateX(${-(100 * ((slide - 1) % data.length))}%)`
-    // }
 
     const goToSlide = (index) =>{
         setSlide(index);

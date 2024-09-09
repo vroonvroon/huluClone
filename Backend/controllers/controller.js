@@ -55,56 +55,21 @@ const LogIn = async (req, res) => {
       token: await user.generateToken(),
       name: user.name,
       email: user.email,
-      // Add any other fields you want to store
     };
     res.status(200).json({
       userData
     });
-    // localStorage.setItem('user', JSON.stringify(userData));
   } catch (err) {
     console.log("Error while logging in", err);
     res.status(500).json("Internal Server Error");
   }
 };
 
-// const LogIn = async (req, res) => {
-//      console.log(req.body);
-//      try {
-//        const {email, password} = req.body;
-//        const isLoggedIn = await Users.findOne({email});
-
-//        if (!isLoggedIn) {
-//           res.status(401).json("Invalid Credentials")
-//        } else {
-//           // const user = await bcrypt.compare(password, isLoggedIn.password); // this is commented because this line of code is used in model/signup-model.js file as a model function using schema methods
-//           const passwordValid = await isLoggedIn.comparePassword(password);
-//           if(passwordValid) {
-//              res.status(200).json({
-//               msg: "Login Successful",
-//               token: await isLoggedIn.generateToken(),
-//               userId: isLoggedIn._id.toString()
-//              });
-//           } else {
-//             res.status(401).json("Invalid email or password")
-//           }
-//        }
-//      } catch (err) {
-//        console.log(err);
-//        res.status(500).json("Internal Server Error")
-//       //  res.status(400).json("Login Failed")
-//      }
-// }
-
-
-
-// GET USER DATA //
-
 
 //GET USER LOGIC //
 const User = async (req, res) => {
   try {
     const userData = req.user;
-    // console.log("UserData in Controller", userData);
     res.status(200).json(userData);
   } catch (err) {
     console.log(err);
@@ -112,32 +77,7 @@ const User = async (req, res) => {
 }
 
 
-const getUser = async (req, res) => {
-   try{
-    const id = req.params.id;
-    const response = await Users.findOne({_id : id});
-    // console.log(response);
-    res.status(200).json(response)
-   } catch(err) {
-     console.log(err);
-     res.status(500).json({ message: "Internal Server Error" });
-   }
-};
-
 // UPDATE USER INFO //
-const UpdateUser = async (req, res) => {
-   try {
-      const id = req.params.id;
-      const updatedUserData = req.body;
-
-      const updatedData = await Users.updateOne({_id: id}, {$set: updatedUserData});
-      res.status(200).json(updatedData);
-   } catch (err) {
-     console.log(err);
-   }
-}
-
-
 const updateUser = async (req, res) => {
   console.log('params.id:', req.params.id);
     try {
@@ -151,19 +91,8 @@ const updateUser = async (req, res) => {
   }
 }
 
+
 // DELETE USER //
-const Delete = async (req, res) => {
-  try {
-    const id = req.params.id;
-    const response = await Users.deleteOne({_id: id});
-    // console.log(response);
-    res.status(200).json({message: 'User Deleted'});
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-
 const deleteUser = async (req, res) => {
   try {
     const id = req.params.id;
@@ -176,4 +105,4 @@ const deleteUser = async (req, res) => {
 }
 
 
-module.exports = {SignUp, LogIn, User, getUser, UpdateUser, Delete, deleteUser, updateUser};
+module.exports = {SignUp, LogIn, User, deleteUser, updateUser};

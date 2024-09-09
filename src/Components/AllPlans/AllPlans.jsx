@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './AllPlans.module.css'
 import { AllPlansData } from './AllPlansData'
 
+
 const AllPlans = () => {
 
     const [data] = useState(AllPlansData);
@@ -22,7 +23,6 @@ const AllPlans = () => {
               {data.map((item) => {
                 return (
                   <>
-              
                     <div className={`${styles.gridWindow} position-relative`}>
                         <img src={item.img} alt="" className={styles.gridImg}/>
                         <span className={styles.overlay}></span>
@@ -38,11 +38,6 @@ const AllPlans = () => {
         </div>
         <div class={styles.moreInfo}>Premium network add-ons available for an additional cost</div>
       </div>
-    
-    
-        
-       
-
     </>
   )
 }

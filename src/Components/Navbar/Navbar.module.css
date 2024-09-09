@@ -37,6 +37,7 @@ body {
     width: 100%;
     z-index: 200;
     background-color: #141414ff;
+    padding-inline: 30px;
 }
 
 .navActive {
@@ -56,15 +57,6 @@ body {
 .quicklinks>div {
     cursor: pointer;
 }
-
-/* .quicklinks>div:hover {
-    color:#1ce783;
-}
-
-.quicklinks>div>p:hover {
-    color:#1ce783;
-} */
-
 
 .navbarHeadingsContainer {
     display: inline-block;
@@ -92,10 +84,12 @@ body {
 
 .navSubs {
     padding-block: 10px;
+    font-size: 16px;
 }
 
 .navHeaderHover {
     color: #1ce783;
+    transition: color 0.2s ease-in-out;
 }
 
 .pageActive {
@@ -107,27 +101,29 @@ body {
 }
 
 .left {
-display: flex;
-align-items: center;
-font-size: 14px;
-font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 10px;
 }
 
 .quicklinks {
-list-style: none;
-padding: 0px;
-margin: 0px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 550px;
-z-index: 5000;
-transition: 0.3s all;
-position: sticky;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+    z-index: 5000;
+    transition: 0.3s all;
+    position: sticky;
+    padding-left: 10px;
+    gap: 30px;
 }
 
 .hide {
-/* visibility: hidden; */
 display: none;
 justify-content: space-between;
 align-items: center;
@@ -139,11 +135,16 @@ transition: 0.5s;
 }
 
 .quicklinks ul{
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 550px;
-cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+    cursor: pointer;
+}
+
+.linkNames {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .searchContainer {
@@ -160,7 +161,7 @@ cursor: pointer;
     width: 600px;
     display: flex;
     opacity: 1;
-    right: 750px;
+    right: 870px;
     height: 50px;
     align-items: center;
     position: absolute;
@@ -174,16 +175,16 @@ cursor: pointer;
     background-color: transparent;
     border: 0px;
     padding: 0px 10px 0px 10px;
+    font-size: 30px;
     color: white;
-    font-size: 25px;
     font-weight: 600;
     outline: none;
 }
 
 .searchBox::placeholder {
     color: #cccccc;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .original-grp, .fx-grp, .assets-grp, .about-grp {
@@ -240,30 +241,31 @@ cursor: pointer;
 }
 
 .hideRight {
+    position: absolute;
+    right: 30px;
     opacity: 0;
     transform: scale(0.5);
     transition: 0.2s ease-in-out;
 }
 
 .loginBtn {
-    padding: 6px 26px 8px 26px;
+    padding: 4px 30px 6px 30px;
     background-color: #1ce783;
     border: none;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     margin-left: 30px;
     letter-spacing: 0.5px;
 }
 
 .closeBtn {
-    padding: 6px 26px 8px 26px;
+    padding: 4px 30px 6px 30px;
     background-color: #1ce783;
     border: none;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     margin-left: 30px;
     letter-spacing: 0.5px;
-    position: absolute;
     opacity: 1;
     transform: scale(1);
     right: 0px;
@@ -289,5 +291,6 @@ cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
-    transition: background-color 0.3s ease-in-out;
+    gap: 5px;
+    transition: color 0.2s ease-in-out;
 }

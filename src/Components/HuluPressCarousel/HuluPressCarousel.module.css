@@ -3,8 +3,6 @@
     width: 100%;
     height: 500px;
     margin-top: 75px;
-    /* display: flex; */
-    /* overflow-x: hidden; */
 }
 
 .OuterCarousel {
@@ -24,7 +22,6 @@
 .carouselFrame {
     width: 100%;
     display: flex;
-    /* overflow-x: hidden; */
     position: relative;
 }
 
@@ -35,52 +32,36 @@
 }
 
 .slide {
-    /* position: relative;
-    height: 500px;
-    width: 100%;
-    display: block; */
-    /* overflow: hidden; */
     transform: scale(0.95);
     transition:  transform 0.3s;
 }
 
 .slideActive {
-    /* position: relative;
-    height: 500px;
-    width: 100%;
-    display: block; */
-    /* overflow: hidden; */
     transform: scale(1);
     transition: 0.7s ease-in-out all;
 }
 
 .carouselImgBox {
-    /* width: 100%; */
-    height: 500px;
-    /* position: absolute; */
+    width: 100vw;
+    height: 560px;
 }
 
 .carouselImg {
-    /* position: absolute;
-    width: 100%; */
+    width: 100%; 
     height: 100%;
-    /* width: 100%; */
     object-fit: cover;
-    /* transition: 0.5s linear all;
-    transform: scale(1); */
 }
 
 .activeCarouselImg {
     height: 100%;
-    /* width: 100%; */
     object-fit: cover;
 }
 
 .slideContentActive {
     position: absolute;
     z-index: 2;
-    top: 35%;
-    left: 13%;
+    top: 25%;
+    left: 11%;
     opacity: 1;
     transition: 0.7s ease-out all;
 }
@@ -88,7 +69,7 @@
 .slideContent {
     position: absolute;
     top: 50%;
-    left: 13%;
+    left: 11%;
     z-index: 100;
     opacity: 0;
     transition-delay: 10ms;
@@ -129,7 +110,7 @@
     margin-left: 50px;
     cursor: pointer;
     left: 1rem;
-    top: 50%;
+    top: 45%;
     z-index: 1;
 }
 
@@ -138,7 +119,7 @@
     margin-right: 50px;
     cursor: pointer;
     right: 1rem;
-    top: 50%;
+    top: 45%;
 }
 
 
@@ -148,16 +129,8 @@
 }
 
 .streaming {
-    font-size: 28px;
+    font-size: 29px;
     color: white;
     font-weight: 700;
+    margin-top: 10px;
 }
-
-/* @keyframes carouselAnimation {
-    0% {
-        transform: scale(1)
-    }
-    100% {
-        transform: scale(1.025)
-    }
-} */

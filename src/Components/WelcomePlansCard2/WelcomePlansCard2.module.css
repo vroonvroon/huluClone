@@ -2,6 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 245px;
+    padding-inline: 2px;
+    padding-block: 10px;
+}
+
+.delicatePlans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 30px;
+    padding-inline: 8px;
 }
 
 .pill {
@@ -19,6 +30,10 @@
     visibility: hidden;
 }
 
+.delicatenopill {
+    display: none;
+}
+
 .plansHeading {
     color: white;
     font-size: 10px; 
@@ -29,11 +44,9 @@
 
 .plansSubheading {
     font-size: 13px; 
-  /* font-weight: 400; */
 }
 
 .PriceButton {
-    /* width: 200px; */
     height: 54px;
     font-size: 16px;
     font-weight: 700;
@@ -50,13 +63,12 @@
     text-align: center;
 }
 
-.plans {
-    width: 100%;
+.delicateplanText {
+    font-size: 18px;
+    font-weight: 500;
     text-align: center;
-}
-
-.plans > * {
-    width: fit-content;
+    width: 120px;
+    line-height: normal;
 }
 
 .planLogo {
@@ -64,9 +76,16 @@
     height: 42px;
 }
 
+
+.delicateplanLogo {
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+}
+
 .PriceButton {
     height: 54px;
-    width: 200px;
+    width: 100%;
     font-size: 15px;
 }
 
@@ -84,9 +103,33 @@
     border-radius: 5px;
 }
 
+.delicate2PriceButton {
+    height: 48px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: black;
+    color: #fff;
+    margin-top: 14px;
+    transition: 0.2s;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 50px;
+    line-height: 1;
+}
+
 .planText {
     font-size: 16px;
     font-weight: 500;
+}
+
+.popularPlan {
+    background-color: #f5f6f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 30px;
+    padding-inline: 8px;
 }
 
 
@@ -96,12 +139,13 @@
     .plans {
         width: 100%;
         text-align: center;
+        padding-inline: 7px;
+        width: 220px;
     }
 
     .PriceButton {
         height: 54px;
         width: 200px;
-        
     }
 
     .planText {

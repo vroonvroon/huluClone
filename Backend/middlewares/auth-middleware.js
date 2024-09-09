@@ -37,17 +37,3 @@ const authMiddleware = async (req, res, next) => {
 module.exports = authMiddleware;
 
 
-
-
-  const checkPassword = async (req, res) => {
-    try {
-      const { email, password } = req.body;
-      const userId = req.user._id;
-      console.log(userId);
-      const user = await Users.findOne(userId);
-      // ... rest of your code
-    } catch (err) {
-      console.error(err);
-      return res.status(500).json({ error: 'Error checking password' });
-    }
-  };

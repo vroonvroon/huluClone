@@ -61,16 +61,7 @@ const CorporateDataWindow = () => {
         }, 1500);
       }
     }, [animate]);
-        
-    // useEffect(() => {
-    //   if (animate) {
-    //     div1Ref.current.style.animationDelay = '0ms';
-    //     div2Ref.current.style.animationDelay = '500ms';
-    //     div3Ref.current.style.animationDelay = '1000ms';
-    //     div4Ref.current.style.animationDelay = '1500ms';
-    //   }
-    // }, [animate]);
-
+    
 
   return (
     <>
@@ -118,121 +109,6 @@ const CorporateDataWindow = () => {
       </div>
       
     </div>
-     
- 
-        {/* <div className={styles.subscribers} ref={block} style={animationStyle}>
-          <img src={paidSubscribers} alt="" className={styles.boxesImg}/>
-          <div className={styles.counterInfo}>
-            <div className={styles.numbersOnly}>
-
-              <div className={styles.actualShizz}>
-                {subscribersArray.map((subscriber, index) => (
-                    <p key={index} className={styles.firstLine}>{subscriber}</p>
-                  ))}
-              </div>
-
-              <div className={styles.actualShizz}>
-                {subscribersArray.map((subscriber, index) => (
-                    <p key={index} className={styles.secondLine}>{subscriber}</p>
-                  ))}
-              </div>
-
-              <span>.</span>
-              
-              <div className={styles.actualShizz}>
-                {subscribersArray.map((subscriber, index) => (
-                    <p key={index} className={styles.thirdLine}>{subscriber}</p>
-                  ))}
-              </div>
-    
-              <p className={styles.letterM}>M</p>
-            </div>
-            <p>Paid Subscribers In the U.S. (as last reported in August 2023)</p>
-          </div>
-        </div> */}
-
-{/*       
-        <div className={styles.episodes} ref={block} style={animationStyle}>
-          <img src={TVHub} alt="" className={styles.boxesImg}/>
-           <div className={styles.counterInfo}>
-            <div className={styles.numbersOnly}>
-
-            <div className={styles.actualShizz}>
-                {TVEpiArray.map((item, index) => (
-                    <p key={index} className={styles.firstLine}>{item}</p>
-                  ))}
-            </div>
-
-            <div className={styles.actualShizz}>
-                {TVEpiArray.map((item, index) => (
-                    <p key={index} className={styles.secondLine}>{item}</p>
-                  ))}
-            </div>
-
-              <span className={styles.firstcounter}>,</span>
-
-            <div className={styles.actualShizz}>
-                {TVEpiArray.map((item, index) => (
-                    <p key={index} className={styles.thirdLine}>{item}</p>
-                  ))}
-            </div>
-
-            <div className={styles.actualShizz}>
-                {channelsArray.map((channels, index) => (
-                    <p key={index} className={styles.fourthLine}>{channels}</p>
-                  ))}
-            </div>
-
-            <div className={styles.actualShizz}>
-                {channelsArray.map((channels, index) => (
-                    <p key={index} className={styles.fifthLine}>{channels}</p>
-                  ))}
-            </div>
-          
-              <p className={styles.firstcounter}>+</p>
-            </div>
-            <p>TV episodes and movies</p>
-            </div>
-        </div> */}
-
-        {/* <div className={styles.liveChannels} ref={block}>
-          <img src={livechannels} alt="" className={styles.boxesImg}/>
-           <div className={styles.counterInfo}>
-            <div className={styles.numbersOnly}>
-          
-           <div className={styles.actualShizz} style={officeRollUpAnimation1}>
-                {TVEpiArray.map((item, index) => (
-                    <p key={index} className={styles.thirdLine}>{item}</p>
-                  ))}
-            </div>
-
-            <div className={styles.actualShizz} style={officeRollUpAnimation2}>
-                {TVShowArray.map((item, index) => (
-                    <p key={index} className={styles.thirdLine}>{item}</p>
-                  ))}
-            </div>
-
-            <span>+</span>
-            </div>
-          <p>Live channels</p>
-          </div>
-        </div> */}
-
-        {/* <div className={styles.offices} ref={block} style={animationStyle}>
-          <img src={offices} alt="" className={styles.boxesImg}/>
-           <div className={styles.counterInfo}>
-            <div className={styles.numbersOnly}>
-            
-              <div className={styles.actualShizz} style={rollUpAnimation}>
-                    {officesArray.map((office, index) => (
-                        <p key={index} className={styles.thirdLine}>{office}</p>
-                      ))}
-              </div>
-            </div>
-              <p>Offices across U.S.</p>
-           
-           </div>
-      </div> */}
     </>
   )
 }

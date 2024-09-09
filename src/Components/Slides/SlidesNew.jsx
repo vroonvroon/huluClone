@@ -14,46 +14,34 @@ const SlidesNew = () => {
     const [data] = useState(SlidesData);
     const [contentData] = useState(SlidesData);
     const [currentTab, setcurrentTab] = useState(0);
-    const [currentSlide, setcurrentSlide] = useState(0);
+    const [underlineWidth, setUnderlineWidth] = useState(0);
+    const [underlineLeft, setUnderlineLeft] = useState(0);
     
 
-  const navHeadersRef = useRef([]);
-  const bluIndicatorRef = useRef(null);
+    const navHeadersRef = useRef([]);
+    const bluIndicatorRef = useRef(null);
 
 
-  // const handleNavHeaderClick = (page) => {
-  //   setActivePage(page);
-  // };
-
-  useEffect(() => {
-    const navHeaders = navHeadersRef.current;
-    const bluIndicator = bluIndicatorRef.current;
-
-    // Add event listener to each p tag
-    navHeaders.forEach((navHeader) => {
-    navHeader.addEventListener('click', () => {
-    const width = navHeader.offsetWidth;
-    const left = navHeader.offsetLeft;
-
-    // Update the bluIndicator span's width and position
-    if (bluIndicator) {
-    bluIndicator.style.width = `${width}px`;
-    bluIndicator.style.left = `${left}px`;
-    }
-    });
-  });
-
-  return () => {
-    // Clean up the event listeners when the component unmounts
-    navHeaders.forEach((navHeader) => {
-      if (navHeader) {
-      navHeader.removeEventListener('click', () => {});
-      }
-    });
-  };
-    },[])
-
+    useEffect(() => {
+      const updateUnderlinePosition = () => {
+        const activeTab = navHeadersRef.current[currentTab];
+        const underline = bluIndicatorRef.current;
     
+        if (activeTab && underline) {
+          setUnderlineWidth(activeTab.offsetWidth);
+          setUnderlineLeft(activeTab.offsetLeft);
+        }
+      };
+    
+      updateUnderlinePosition();
+    
+      window.addEventListener('resize', updateUnderlinePosition);
+    
+      return () => {
+        window.removeEventListener('resize', updateUnderlinePosition);
+      };
+    }, [currentTab]);
+
 
   return (
     <>
@@ -74,7 +62,6 @@ const SlidesNew = () => {
       {/* TABS & CONTENT & CHANNEL-LIST*/}
 
     <div className={styles.tabandSlideGrp}>
-
       <div className={styles.tabs}>
         <div className={styles.tabContainer}>
           {headers.map((header, index) => {
@@ -89,26 +76,14 @@ const SlidesNew = () => {
               </p>
             );
           })}
-                  <span id="shifter" className={styles.underline} ref={bluIndicatorRef}></span>
+                  <span id="shifter" className={styles.underline} ref={bluIndicatorRef} style={{
+                  width: `${underlineWidth}px`,
+                  left: `${underlineLeft}px`,
+                }}></span>
         </div>
-
       </div>
 
-        {/* <div className={styles.tabs}>
-
-            <div className={styles.tabContainer}>
-             {headers.map((header, index) => {
-               return (
-                 <>
-                 <p onClick={() =>setcurrentTab(index)} className={currentTab === index ? styles.activeTab : styles.tab}>{header.name}</p>
-                 </>
-               )
-             })}
-            </div>
-
-            <span id="shifter" className={styles.underline} ref={bluIndicatorRef}></span>
-        </div> */}
-            
+  
       <div className={styles.contentSection}>
         {contentData.map((slide, index) => {
             return (
@@ -132,27 +107,12 @@ const SlidesNew = () => {
                 </div>
 
             </div>
-
-           
             </>
             )   
         }) 
         }
       </div>
 
-      {/* <div className={styles.channelinfoGrp}>
-            <div className={styles.channelsList}>
-            {channels.map((channel, index) => {
-                return (
-                <>
-                    <div className={styles.channelBackground} key={index}>
-                    <img src={channel.channels} alt="" className={styles.channelImg} />
-                    </div>
-                </>
-                )
-            })}
-            </div>
-      </div> */}
     </div>
 
        </div>

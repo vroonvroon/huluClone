@@ -31,8 +31,6 @@
 .sublinks {
     list-style: none;
     margin-bottom: 10px;
-    /* width: 100px; */
-    /* line-height: 1; */
 }
 
 .subsublinksGrp {
@@ -112,7 +110,6 @@
         margin-bottom: 10px;
         width: auto;
         margin-right: 30px;
-        /* line-height: 1; */
     }
 
     .subsublinksGrp {
@@ -170,7 +167,6 @@
         list-style: none;
         margin-bottom: 10px;
         width: 100px;
-        /* line-height: 1; */
     }
 
     .subsublinksGrp {

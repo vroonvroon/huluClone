@@ -34,7 +34,7 @@
 .tabandSlideGrp {
     position: absolute;
     top: 0px;
-    padding: 150px 280px;
+    padding: 200px 230px;
 }
 
 
@@ -53,7 +53,7 @@
 
 .activeTab {
     color: white;
-    font-size: calc(20px - 0.5vw);
+    font-size: calc(20px - 0.4vw);
     font-weight: 700;
     letter-spacing: 0.7px;
     cursor: pointer;
@@ -61,7 +61,7 @@
 
 .tab {
     color: rgba(239, 239, 239, 0.514);
-    font-size: calc(20px - 0.5vw);
+    font-size: calc(20px - 0.4vw);
     font-weight: 700;
     letter-spacing: 0.7px;
     cursor: pointer;
@@ -98,9 +98,9 @@
 .description {
     color: white;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-top: 20px;
 }
 
@@ -127,14 +127,13 @@
 }
 
 .channelinfoGrp {
-    /* position: relative; */
     top: 470px;
     left: 260px;
     width: 100%;
 }
 
 
- @media (min-width: 320px) and (max-width: 768px) {
+ @media (min-width: 320px) and (max-width: 767px) {
 
     .tabandSlideGrp {
         position: absolute;
@@ -212,14 +211,6 @@
     }
  }
 
-
-@media (min-width: 375px) {
-    /* .activeTab,
-    .tab {
-        margin: 0;
-        font-size: calc(11px + 1vw);
-    } */
- }
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
@@ -323,6 +314,32 @@
 .activeTab,
 .tab {
         font-size: 15px;
+}
+
+.activeTab {
+    color: white;
+    font-size: calc(18px - 0.5vw);
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+}
+
+.tab {
+    color: rgba(239, 239, 239, 0.514);
+    font-size: calc(18px - 0.5vw);
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+}
+
+.description {
+    color: white;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    margin-top: 20px;
+    width: 440px
 }
  
  .slideImages {

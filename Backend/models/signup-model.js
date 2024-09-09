@@ -48,6 +48,12 @@ SignupSchema.pre("save", async function(next) {
     }
 });
 
+// comparing passwords //
+SignupSchema.methods.comparePassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
+
 // login for just for email  //
 SignupSchema.methods.emailExists = async function(email) {
   try {
@@ -59,18 +65,6 @@ SignupSchema.methods.emailExists = async function(email) {
   }
 }
 
-// login for email & password //
-SignupSchema.methods.comparePassword = async function(password) {
-  console.log('Using the older login comparePassword method');
-  try {
-    console.log('Password:', password);
-    console.log("Hashed Password : ", this.password);
-    return await bcrypt.compare(password, this.password);
-  } catch (err) {
-    console.error(err);
-    throw err;
-  }
-}
 
 // generating jwt token //
 SignupSchema.methods.generateToken = async function() {

@@ -5,9 +5,6 @@ import { OriginalsCardData as data} from './OriginalsCardData'
 
 const OriginalsCard = () => {
 
-  // const [data, setData] = useState(OriginalsCardData);
-
-
   const [items, setItems] = useState(
     data.map((item) => ({
       ...item,
@@ -18,7 +15,10 @@ const OriginalsCard = () => {
   const scaleUp = useCallback((id) => {
     setItems((prevItems) =>
       prevItems.map((item) =>
-        item.id === id ? { ...item, show: true } : item
+        item.id === id ? { 
+          ...item, 
+          show: true 
+        } : item
       )
     );
   }, []);
@@ -26,7 +26,10 @@ const OriginalsCard = () => {
   const scaleNorm = useCallback((id) => {
     setItems((prevItems) =>
       prevItems.map((item) =>
-        item.id === id ? { ...item, show: false } : item
+        item.id === id ? { 
+          ...item, 
+          show: false 
+        } : item
       )
     );
   }, []);
@@ -40,10 +43,12 @@ const OriginalsCard = () => {
             <div className={styles.originalCards} onMouseEnter={() => scaleUp(item.id)} onMouseOut={() => scaleNorm(item.id)}>
                 <img src={item.img} className={styles.originalsImg}/> 
                     <div className={styles.overlay}></div>
+      
                         <div className={styles.originalsCardText}>
                                 <p className={styles.header}>{item.heading}</p>
                         </div>
-                    <span className={item.show ? styles.lineActive: styles.line}></span>
+                        <span className={item.show ? styles.lineActive: styles.line}></span>
+     
             </div>
         </>
        )

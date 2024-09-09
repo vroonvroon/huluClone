@@ -79,14 +79,7 @@
     display: none;
 }
 
-/* .outerDiv {
-    max-height: 900px;
-    display: flex;
-    justify-content: center;
-} */
-
 .outerDiv  {
-    /* overflow-y: scroll; */
     width: 100%;
 }
 
@@ -99,27 +92,14 @@
     display: flex;
     overflow-y: scroll;
     background-color: #00002280;
-    /* justify-content: center; */
     z-index: 999;
 }
 
-/* .bioPage {
-    background-color: white;
-    padding: 0px 90px 120px 90px;
-    margin-inline: auto;
-    max-width: 1200px;
-    position: absolute;
-    max-height: 1000px;
-    overflow-y: scroll;
-} */
 
 .bioPage {
     background-color: white;
     margin-inline: auto;
-    /* max-width: 1200px; */
     position: absolute;
-    /* max-height: 1000px; */
-    /* overflow-y: scroll; */
     margin: 75px 120px 120px 120px;
 }
 .closeButtonGrp {

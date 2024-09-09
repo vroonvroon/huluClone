@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Modal.module.css'
 import { useContext } from 'react'
 import { ModalContext } from '../../../Pages/HomePage/Home'
+import { VideoContext } from '../../../Pages/FX/FX' 
 
 
 const Modal = () => {
@@ -33,5 +34,33 @@ const Modal = () => {
     </>
   )
 }
-
 export default Modal
+
+
+
+export const VideoModal = () => {
+
+  const {setVideo} = useContext(VideoContext);
+
+  return (
+    <>
+      <div className={styles.videomodalContainer}>
+        <div className={styles.videomodal}>
+          <div className={styles.videomodalHeader}>
+            <div id={styles.videoclose} onClick={() => setVideo(false)}>
+                <svg width="22px" height="23px" viewBox="0 0 22 23"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="square"><g transform="translate(-1047.000000, -266.000000)" stroke="#6B7790" strokeWidth="2"><g transform="translate(500.000000, 235.500000)"><g transform="translate(548.000000, 32.000000)"><path d="M0.625,19.375 L19.375,0.625"></path><path d="M0.625,0.625 L19.375,19.375"></path></g></g></g></g></svg>
+            </div>
+
+            <div className={styles.videoFrame}>
+              <video src="https://assetshuluimcom-a.akamaihd.net/fx_on_hulu/FXSOH_FX_Sizzle_Hulu.mp4" className={styles.video}
+              controls
+              autoplay
+              playsInline
+              muted></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}

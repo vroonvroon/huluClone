@@ -9,6 +9,8 @@ import DarkGreenMark from '../../assets/images/ForDelicate/Pricing_Checkmark_gre
 const AddOns2 = () => {
 
     const [data] = useState(AddOnData2);
+
+    const isMobile = window.innerWidth < 767;
  
   return (
     <>
@@ -20,9 +22,15 @@ const AddOns2 = () => {
                   {item.infoIcon && <img src={infoIcon}/>}
                 </p>
 
-                <div className={styles.AddOnDataCheckMarks}>
+                <div className={styles.AddOnDataCheckMarks2}>
                     <div className='col-lg-4 text-center'><img src={greencheck} className={styles.greenCheck} alt="" /></div>
+
+                    {!isMobile && <div style={{width: '1px', height: '21px', backgroundColor: 'white'}}></div>}
+
                     <div className='col-lg-4 text-center'><img src={greencheck} className={styles.greenCheck} alt="" /></div>
+
+                    {!isMobile && <div style={{width: '1px', height: '21px', backgroundColor: 'white'}}></div>}
+
                     <div className='col-lg-4 text-center'><img src={greencheck} className={styles.greenCheck} alt="" /></div>
                 </div>
               </div>
@@ -33,6 +41,7 @@ const AddOns2 = () => {
     </>
   )
 }
+
 
 export const FXAddOns2 = () => {
 
@@ -45,6 +54,35 @@ return (
           <>
              <div className={styles.optionsFlex}>
               <p className={styles.AddOnDataTitle}>{item.name} &nbsp; 
+                {item.infoIcon && <img src={infoIcon}/>}
+              </p>
+
+              <div className={styles.AddOnDataCheckMarks}>
+                  <div className='col-lg-4 text-center'><img src={DarkGreenMark} className={styles.greenCheck} alt="" /></div>
+                  <div className='col-lg-4 text-center'><img src={DarkGreenMark} className={styles.greenCheck} alt="" /></div>
+                  <div className='col-lg-4 text-center'><img src={DarkGreenMark} className={styles.greenCheck} alt="" /></div>
+              </div>
+            </div>
+          </>
+      )
+  })}
+    
+  </>
+)
+}
+
+
+export const DelicateAddOns2 = () => {
+
+  const [data] = useState(AddOnData2);
+
+return (
+  <>
+  {data.map((item) => {
+      return (
+          <>
+             <div className={styles.optionsFlex}>
+              <p className={styles.delicateAddOnDataTitle}>{item.name} &nbsp; 
                 {item.infoIcon && <img src={infoIcon}/>}
               </p>
 

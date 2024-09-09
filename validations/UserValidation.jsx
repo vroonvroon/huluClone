@@ -16,20 +16,3 @@ const userSchema = z.object({
 export default userSchema;
 
 
-// import * as yup from 'yup';
-
-// const userSchema = yup.object().shape({
-//     email: yup.string().required().email(),
-//     password: yup.string().required().min(4).max(10),
-//     name: z.string().required(),
-//     birthdate: {
-//         month: yup.string().required(),
-//         day: yup.string().required(),
-//         year: yup.string().required()
-//     },
-//     zipcode: yup.string().required(),
-//     gender: yup.string().required(),
-// });
-
-// export default userSchema;
-

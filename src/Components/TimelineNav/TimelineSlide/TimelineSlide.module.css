@@ -12,8 +12,7 @@
 .timelineBoxIndicatorsGrp {
     position: relative;
     display: flex;
-    padding-left: 82px;
-    margin-right: 100px;
+    margin-inline: auto;
 }
 
 .frameContainer {
@@ -22,14 +21,11 @@
 }
 
 .frame {
-    /* border: 1px solid red; */
-    /* position: absolute; */
     top: -64px;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-     /* marginRight: '16px', */
 }
 
 .yearBox {
@@ -40,7 +36,6 @@
     top: -40px;
     visibility: hidden;
     justify-content: center;
-    /* opacity: 0; */
     transition: 0.2s ease-in-out; 
 }
 
@@ -115,44 +110,25 @@
     display: flex;
     height: 425px;
     width: 1290px;
-    /* position: relative; */
     transition: 0.3s ease-in-out all;
 }
 
 .content {
     display: flex;
     margin-inline: 100px;
-    /* position: absolute;  */
-    /* justify-content: space-around;
-    padding-top: 100px;
-    padding-inline: 120px;
-    width: 1290px;
-    height: 320px;    
-    margin-left: 100px;*/
-    
 }
 
 .contentActive {
     display: flex;
     margin-inline: 100px;
-    /* position: absolute;  */
-    /* justify-content: space-around;
-    padding-top: 100px;
-    padding-inline: 120px;
-    position: absolute; 
-    width: 1290px;
-    height: 320px;    
-    margin-left: 100px; */
 }
 
 .slides {
     display: flex;
     height: 425px;
-    /* width: 1290px; */
 }
 
 .timelineContentImgs {
-    /* position: relative; */
     width: 575px;
     height: 323px;
 }

@@ -5,6 +5,22 @@
     margin-block: 35px;
 }
 
+.nowStreamingCard {
+    height: 530px;
+    width: 365px;
+    position: relative;
+    margin-inline: 10px;
+    margin-block: 35px;
+}
+
+.windowimage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 .scrollwindow:hover {
     padding: 4px solid white;
     border-radius: 10px;
@@ -20,24 +36,26 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(0deg, rgb(110, 153, 51), transparent);
     z-index: 97
 }
 
 .titleWindow {
-    position: relative;
-    top: -106px;
+    position: absolute;
+    bottom: 100px;
+    padding-block: 16px;
+    padding-inline: 16px;
+    z-index: 99;
     transition: all 0.3s;
 }
 
 .titleWindowActive {
-    top: -180px;
+    bottom: 170px;
     transition: all 0.2s;
 }
 
 .desc {
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     color: white;
     margin-left: 14px;
     margin-right: 14px;
@@ -55,7 +73,7 @@
 
 .descActive {
     position: absolute;
-    top: 0px;
+    bottom: 120px;
     z-index: 97;
     color: white;
     margin-left: 14px;
@@ -72,6 +90,18 @@
     transition: all 0.2s;
 }
 
+.streaminggenre {
+    position: absolute;
+    bottom: 75px;
+    z-index: 99;
+    color: white;
+    font-size: 17px;
+    padding: 10px 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
 
 .titleWindowDescActive {
     visibility: visible;
@@ -97,4 +127,77 @@
 .window1, .window2, .window3 {
     display: flex;
     padding-inline: 53px;
+}
+
+
+/* // ONLY FOR SERIES // */
+.cardContainer {
+    position: relative;
+    width: 300px;
+    height: 245px;
+    margin: 4px;
+}
+
+.imgContainer {
+    width: 300px;
+    height: 165px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: all 0.2s linear;
+    outline: 5px solid rgba(128, 128, 128, 0);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.imgContainerActive {
+    width: 300px;
+    height: 165px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    outline: 5px solid gray;
+    border-radius: 12px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.actualImg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    padding: 4px;
+}
+
+.arrowImg {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.arrowImgActive {
+    position: absolute;
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+
+.cardContext {
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.genre {
+    font-size: 17px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

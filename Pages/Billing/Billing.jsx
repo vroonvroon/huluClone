@@ -140,16 +140,16 @@ const Billing = () => {
                 <p className={styles.thirdPartyText}>Plans and add-ons available to you may vary when billed by one of the third parties below. Additionally, there may be different steps to make changes to your subscription. You can confirm your billing party on your Hulu <Link to=''>Account page</Link> in the Payment Information section.<br></br>Select your billing party to learn more:</p>
             
 
-                <ul className='mb-5'>
-                    <li><Link to=''>Amazon</Link></li>
-                    <li><Link to=''>Apple</Link></li>
-                    <li><Link to=''>Disney</Link></li>
-                    <li><Link to=''>Google</Link></li>
-                    <li><Link to=''>Roku</Link></li>
-                    <li><Link to=''>Spotify</Link></li>
-                    <li><Link to=''>T-Mobile</Link></li>
-                    <li><Link to=''>Verizon</Link></li>
-                    <li><Link to=''>Xfinity</Link></li>
+                <ul className='mb-5' style={{marginLeft: '30px'}}>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Amazon</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Apple</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Disney</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Google</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Roku</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Spotify</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>T-Mobile</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Verizon</Link></li>
+                    <li style={{ listStyle: 'disc', marginBottom: '7px', fontSize: '18px' }}><Link to=''>Xfinity</Link></li>
                 </ul>
 
                 <p className={styles.toTopText} onClick={scrollToTop}><Link to=''>BACK TO TOP</Link></p>
@@ -274,7 +274,7 @@ const Billing = () => {
     
      <div className={`${styles.bookmark} ${showCard ? styles.bookmarkActive : ''}`} onClick={toggleCard}>
          <img src={feedbackChevron} alt="" className={`${styles.feedBackChevron} ${showCard ? styles.feedBackChevronActive : ''}`}/>
-         <p style={{fontWeight: '600', fontSize: '15px'}}>Feedback</p>
+         <p style={{fontWeight: '500', fontSize: '16px'}}>Feedback</p>
      </div>
      
     </div>

@@ -8,8 +8,7 @@ const db = require('./db');
 const cors = require('cors');
 const SeriesPage = require('./series/series-router');
 const Profilepage = require('./routers/routes');
-const CheckEmail = require("./routers/routes");
-const CheckPassword = require("./routers/routes");
+const errorMiddleware = require("./middlewares/error-middleware");
 
 
 app.use(cors());
@@ -18,8 +17,7 @@ app.use('/api/auth', SignUpPage);
 app.use('/api/auth', LogInPage);
 app.use('/api/data', SeriesPage);
 app.use('/api/data', Profilepage);
-app.use('/api/auth', CheckEmail);
-app.use('/api/auth', CheckPassword);
+app.use(errorMiddleware);
 
 
 db().then(() => {

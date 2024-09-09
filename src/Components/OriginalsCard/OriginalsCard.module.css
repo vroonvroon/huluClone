@@ -8,6 +8,7 @@
 
 .originalCards:hover {
     scale: 1.09;
+    cursor: pointer;
 }
 
 .originalsImg  {
@@ -36,6 +37,7 @@
     font-size: 24px;
     color: white;
     padding-inline: 30px;
+    pointer-events: none;
 }
 
 .line {
@@ -56,4 +58,5 @@
     left: 0px;
     background-color: #1ce783;
     height: 5px;
+    transition: 0.2s all;
 }

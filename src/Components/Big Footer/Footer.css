@@ -13,6 +13,7 @@
     list-style: none;
     margin-bottom: 10px;
     width: 80%;
+    font-size: 16px;
 }
 
 .linkSections {
@@ -38,13 +39,14 @@
 }
 
 .accordianArrow {
-    display: none;
+   display: none;
 }
+
 
 .link-header {
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 14px;;
+    font-size: 15px;
 }
 
 .quick-links {
@@ -53,7 +55,6 @@
     font-size: 14px;
     color: rgb(88, 97, 116);
     padding-bottom: 86px;
-    border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
     width: 100%;
 }
 
@@ -63,7 +64,6 @@
     font-size: 14px;
     color: rgb(88, 97, 116);
     padding-bottom: 86px;
-    border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
 }
 
 .quick-links p {
@@ -72,6 +72,7 @@
 
 .social-media-section {
     padding-top: 32px;
+    border-top: 1px solid lightgray;
 }
 
 .social-media img {
@@ -80,16 +81,25 @@
 
 .extra-links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 36px;
-    font-size: 13px;
     color: rgb(88, 97, 116);
+    row-gap: 12px;
 }
 
-.extra-links p {
-    padding-right: 32px;
-    display: flex;
-    align-items: center;
-    font-size: 13px;
+
+.extra-links > p {
+    font-size: 13.2px;
+    display: block; 
+    padding-right: 26px;
+
+}
+
+.extra-links > p:last-child {
+    font-size: 13.2px;
+    display: block; 
+    order: -1;
 }
 
 p {
@@ -102,7 +112,6 @@ p {
     font-size: 14px;
     color: rgb(88, 97, 116);
     padding-bottom: 0px;
-    /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
     width: 100%;
 }
 
@@ -121,6 +130,11 @@ p {
         padding: 60px 60px 60px 60px;
     }
 
+    .link-header {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
     .listofsublinks {
         display: flex;
     }
@@ -130,7 +144,7 @@ p {
         margin-bottom: 10px;
         width: 110px;
         margin-right: 30px;
-        /* line-height: 1; */
+        font-size: 14px;
     }
 
     .subsublinksGrp {
@@ -165,13 +179,32 @@ p {
         font-size: 14px;
         color: rgb(88, 97, 116);
         padding-bottom: 0px;
-        /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
         width: 100%;
     }
 
     .quickLinksRow2 {
         display: flex;
     }
+
+    .extra-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+
+    .extra-links > p {
+        font-size: 13px;
+        padding-right: 20px;
+
+    }
+
+    .extra-links > p:last-child {
+        font-size: 13px;
+        display: block; 
+        order: -1;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -186,8 +219,13 @@ p {
         justify-content: space-between;
     }
 
-     .listofsublinks {
+    .listofsublinks {
         display: flex;
+    }
+
+    .link-header {
+        font-size: 13px;
+        font-weight: 600;
     }
 
     .sublinks {
@@ -195,12 +233,11 @@ p {
         margin-bottom: 10px;
         width: auto;
         margin-right: 30px;
-        /* line-height: 1; */
+        font-size: 14px;
     }
 
     .subsublinksGrp {
         width: 100%;
-        /* margin-inline: auto; */
     }
 
     .linkgrp {
@@ -231,12 +268,28 @@ p {
         font-size: 14px;
         color: rgb(88, 97, 116);
         padding-bottom: 0px;
-        /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
         width: 100%;
     }
 
     .quickLinksRow2 {
         display: flex;
+    }
+
+    .extra-links {
+        display: flex;
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+
+    .extra-links > p {
+        font-size: 13px;
+    }
+
+    .extra-links > p:last-child {
+        font-size: 13px;
+        display: block; 
+        order: -1;
     }
 }
 
@@ -257,7 +310,6 @@ p {
         font-size: 14px;
         color: rgb(88, 97, 116);
         padding-bottom: 0px;
-        /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
         width: 100%;
     }
 
@@ -267,7 +319,6 @@ p {
         font-size: 14px;
         color: rgb(88, 97, 116);
         padding-bottom: 0px;
-        /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
         width: 100%;
     }
 
@@ -307,7 +358,18 @@ p {
     .extra-links {
         display: inline-flex;
         flex-wrap: wrap;
-        gap: 16px
+        justify-content: normal;
+    }
+
+    .extra-links > p {
+        font-size: 13px;
+        display: block; 
+    }
+
+    .extra-links > p:last-child {
+        font-size: 13px;
+        display: block; 
+        order: 0;
     }
 
     .listofsublinks {
@@ -321,16 +383,14 @@ p {
 
     .Activelistofsublinks2 {
         display: block;
+        padding-bottom: 10px;
     }
 
     .sublinks {
         list-style: none;
         margin-bottom: 5px;
+        font-size: 14px;
     }
-
-    /* .linkBlock {
-        border-bottom: 1px solid lightgray;
-    } */
 
     .accordianArrow {
         display: block;

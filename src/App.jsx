@@ -9,7 +9,6 @@ import AboutPage from '../Pages/About/AboutPage'
 import FX from '../Pages/FX/FX'
 import Delicate from '../Pages/FX/AmericanHorrorStories/Delicate'
 import CreateAccount from '../Pages/CreateAccount/CreateAccount'
-import LoginCard from '../Pages/LoginCard/LoginCard'
 import Profile from './Components/Profile/Profile'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -26,8 +25,8 @@ function App() {
         <Route path='/about' element={<AboutPage />}/>
         <Route path='/account' element={<CreateAccount />}/>
         <Route path='/fx' element={<FX />}/>
-        <Route path='/fx/series/:title' element={<Delicate />} />
-        <Route path='/login' element={<LoginCard/>}></Route>
+        <Route path='/fx/series' element={<Delicate />} />
+        <Route path='/fx/series/:name' element={<Delicate />} />
         <Route path='/profile' element={<Profile/>}></Route>
         <Route path='/profile/:id' element={<Profile/>}></Route>
       </Routes>

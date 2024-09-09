@@ -52,8 +52,6 @@ return (
 };
 
 export const Month2 = ({value, name, setUser, user}) => {
-  
-  // console.log(`Month component: value prop = ${JSON.stringify(value)}`);
     
   const [isActive, setIsActive] = useState(false);
   const options= ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November', 'December']

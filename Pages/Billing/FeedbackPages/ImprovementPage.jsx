@@ -171,7 +171,7 @@ useEffect(()=>{
             <div className="mb-3">
                 <p className={styles.shareFeedbackBox}>Please share your feedback.</p>
                 <textarea value={text} onChange={(e) =>textChange(e)} name="" id="" cols="10" rows="3" style={{width: '100%'}}></textarea>
-                <p style={{fontSize: '12px', color:'rgb(94, 101, 115)'}}>{text.length} of max 255 characters entered.</p>
+                <p style={{fontSize: '14px', color:'rgb(94, 101, 115)'}}>{text.length} of max 255 characters entered.</p>
             </div>
 
         {/* PLATFORM DROPDOWN*/}

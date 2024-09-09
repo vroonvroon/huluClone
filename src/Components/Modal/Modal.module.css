@@ -1,5 +1,6 @@
 
-.modalContainer {
+.modalContainer,
+.videomodalContainer {
     position: fixed; 
     background-color: rgba(0, 0, 0, 0.3);
     top: 0px;
@@ -42,4 +43,38 @@
   #close {
     cursor: pointer;
  }
+ 
+
+ /* // FOR VIDEO ONLY // */
+
+ 
+ .videomodal {
+   background-color: white;
+   max-width: 1010px;
+   margin: 90px auto;
+   z-index: 200;
+   padding: 60 60px;
+ }
+
+ .videomodalHeader {
+     padding: 35px 35px;
+ }
+
+ #videoclose {
+     cursor: pointer;
+     display: flex;
+     justify-content: end;
+ }
+
+ .videoFrame {
+     height: 520px;
+     position: relative;
+     margin-inline: 30px;
+ }
+
+ .video {
+    position: absolute;
+    width: 100%
+ } 
+
  

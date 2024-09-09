@@ -159,8 +159,6 @@ const StudentDeal = () => {
         <div className={styles.verticalscroll}>
             <p style={{paddingLeft: '80px', fontWeight: '700', fontSize: '18px', letterSpacing: '0.8px', marginBottom: '10px'}}>TRENDING ON HULU</p>
 
-    
-
         <div className={styles.scrollbtns}>
             {/* {LEFT BUTTON}  */}
             <svg onClick={slideFront} className={styles.scrollbuttonl}viewBox="0 0 64 64"><title>Previous</title><g transform="matrix(0 -1 -1 0 64 64)" fill="none" fillRule="evenodd"><circle fill="#FFF" cx="32" cy="32" r="32"></circle><path d="M40.8 27.92l-9.2 9.2-9.2-9.2" strokeWidth="2" stroke="#868D9B"></path></g></svg>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './HeroCard.module.css'
-import { PrimaryButton } from '../Buttons/Buttons'
-import { WelcomePlansCardLogo } from '../Images/images'
+
  
 
 const HeroCard = (props) => {

@@ -7,7 +7,6 @@ const Days = ({user, setUser}) => {
     
     const [isActive, setIsActive] = useState(false);
     const options= ['31', '30', '29', '28', '27', '26', '25', '24', '23', '22', '21', '20', '19', '18', '17', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
-    const [daySetter, setDaySetter ] = useState(false);
     const [days, setDays] = useState();
 
 
@@ -57,7 +56,6 @@ export const Days2 = ({value, name, setUser, user}) => {
     
   const [isActive, setIsActive] = useState(false);
   const options= ['31', '30', '29', '28', '27', '26', '25', '24', '23', '22', '21', '20', '19', '18', '17', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
-  const [daySetter, setDaySetter ] = useState(false);
   const [days, setDays] = useState(value);
 
 

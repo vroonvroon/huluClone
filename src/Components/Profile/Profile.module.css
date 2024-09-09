@@ -1,6 +1,5 @@
 .profileBack {
     background: linear-gradient(330.57deg, rgb(24, 57, 73) 0.29%, rgb(4, 4, 5) 90.62%);
-    /* height: 100vh; */
     padding-bottom: 50px;
 }
 
@@ -16,7 +15,6 @@
     padding: 56px 72px;
     border-radius: 12px;
     border: none;
-    /* width: 580px; */
 }
 
 .fieldSet {

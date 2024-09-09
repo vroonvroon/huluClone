@@ -65,8 +65,83 @@
 .seriesDropdownItemActive {
     padding: 10px 12px;
     margin: 10px 5px;
-    /* border: 5px solid transparent; */
     font-size: 15px;
     letter-spacing: 0.5px;
     background-color: #e8eaed;
+}
+
+/* // DROPDOWN STYLES END // */
+
+
+/* // MAIN OUTPUT WINDOW STYLES START// */
+.delicateWindow, .NYCWindow {
+    display: grid;
+    padding-block: 40px; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.card {
+    width: auto;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.imgContainer {
+    width: 268px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    outline: 0px solid #9f9e9e;
+    transition: all 0.1s linear;
+    outline-offset: 4px;
+}
+
+.imgContainerActive {
+    width: 268px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    outline: 4px solid #9f9e9e;
+    transition: all 0.1s linear;
+    outline-offset: 4px;
+}
+
+.cardContext {
+    padding-top: 10px;
+}
+
+.thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.fxlogo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.episodeno {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    padding-top: 5px;
 }

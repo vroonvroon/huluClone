@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './LogIn.module.css';
 import { useState, useRef, useContext } from 'react'
-import { PressLogInButton } from '../Buttons/Buttons';
 import { Link, useNavigate  } from 'react-router-dom';
 import { LogInContext } from '../Navbar/Navbar';
 import {toast} from 'react-toastify';
@@ -19,7 +18,7 @@ const LogIn = () => {
 
     console.log('USER LOGGED IN', user);
 
-    const { setModal, setLoginModal } = useContext(LogInContext) || {};
+    const { modal, setModal } = useContext(LogInContext) || {};
 
     const [email, setEmail] = useState(false);
     const [password, setPassword] = useState(false);
@@ -27,6 +26,7 @@ const LogIn = () => {
     const passwordRef = useRef(null);
     const [showPassword, setShowPassword] = useState(false);
 
+    
     const toggleShowHide = () => {
         setShowPassword(!showPassword);
     };
@@ -69,8 +69,6 @@ const LogIn = () => {
         }
     };
 
-    
-
   return (
     <>
         <div className={styles.modalContainer}>
@@ -109,7 +107,7 @@ const LogIn = () => {
 
                     <div className={styles.createAccountSection}>
 
-                        <div className={styles.close} onClick={() => { setModal(false); setLoginModal(false);
+                        <div className={styles.close} onClick={() => {  setModal(false); 
                         }}>
                             <svg width="22px" height="23px" viewBox="0 0 22 23"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="square"><g transform="translate(-1047.000000, -266.000000)" stroke="#6B7790" strokeWidth="3"><g transform="translate(500.000000, 235.500000)"><g transform="translate(548.000000, 32.000000)"><path d="M0.625,19.375 L19.375,0.625"></path><path d="M0.625,0.625 L19.375,19.375"></path></g></g></g></g></svg>
                         </div>
@@ -119,7 +117,7 @@ const LogIn = () => {
                              <p style={{fontSize: '26px', fontWeight: '800', padding: '0px 10px'}}>CREATE AN ACCOUNT</p>
                             </div>
                             <p style={{fontSize: '16px', marginBlock: '30px'}}>Provide your press credentials and gain access to Hulu media assets.</p>
-                            <button className={styles.getStartedButton}>GET STARTED</button>
+                            <button className={styles.getStartedButton}><Link to='/account'>GET STARTED</Link></button>
 
                             <div className={styles.link}>
                                 <p style={{fontSize: '16px'}}>Looking to watch Hulu Original content?</p>

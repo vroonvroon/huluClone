@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// const URI = process.env.DB_URI;
 const URI = 'mongodb://localhost:27017/huluClone'
 
 const connectDb = async () => {

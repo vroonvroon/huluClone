@@ -1,7 +1,7 @@
 import React,{ useState, useRef } from 'react'
 import { SlidesData } from '../SlidesData';
 import styles from '../Slides.module.css'
-import { WelcomePlansCarouselTitle } from '../../h1/h1';
+
 
 
 const SlideContent = () => {
@@ -23,10 +23,8 @@ const SlideContent = () => {
             <span className={styles.underline}></span>
      </div>
 
-      {/* <div className={`${currentSlide === slide.id? styles.slidecontentActive : styles.slidecontent}`}> */}
+
       <div className={styles.slidecontentActive}>
-                      {/* <WelcomePlansCarouselTitle>{slide.header}</WelcomePlansCarouselTitle>
-                      <p className={styles.description}>{slide.description}</p> */}
 
                       {/* <Channels /> */}
 

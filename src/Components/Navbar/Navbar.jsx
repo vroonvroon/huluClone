@@ -58,10 +58,11 @@ const Navbar = () => {
         { title: 'FX', subs: ['ALL', 'SERIES', 'DOCUMENTARIES'] },
         { title: 'ASSETS', subs: ['BRAND', 'PRODUCT'] },
         { title: 'ABOUT', subs: ['CORPORATE', 'EXECUTIVES'] },
-      ];
+    ];
 
     const [hoveredItem, setHoveredItem] = useState(null);
     const [hoveredSubItem, setHoveredSubItem] = useState({});
+    let [timeoutId, setTimeoutId] = useState(null);
     const [auth, setAuth] = useState(localStorage.getItem('user'));
 
 
@@ -71,29 +72,41 @@ const Navbar = () => {
 
         <div className={styles.left}>
             <div className={styles.logo}>
-                <img src={logo} style={{width: '74px', height: '50px'}}/>
+                <img src={logo} style={{width: '76px', height: '52px'}}/>
                 <p style={{color: '#1ce783', fontSize: '18px', marginLeft: '-3px', marginTop: '3px'}}>PRESS</p>
             </div>
 
         <div>
 
-        <div className={navShow? styles.hide : styles.null}>
+            <div className={navShow? styles.hide : styles.null}>
                 <ul className={styles.quicklinks}>
                 {navItems.map((item, index) => (
                     <div key={index} className={styles.navbarHeadingsContainer}>
                         <div className={`${styles.navHeader} ${currentPage === `/${item.title.toLowerCase()}` ? styles.pageActive : ''} ${
-                        hoveredItem === item.title ? styles.navHeaderHover : ''
-                        }`}
-                        onMouseOver={() => setHoveredItem(item.title)}>
-                        <li>{item.title}</li>
-                        {item.subs && <img src={dropDown} style={navHeadImg} />}
+                          hoveredItem === item.title ? styles.navHeaderHover : ''
+                          }`}
+                          onMouseOver={() => {
+                            clearTimeout(timeoutId);
+                            setHoveredItem(item.title)
+                          }}
+                          onMouseLeave={() => {
+                            timeoutId = setTimeout(() => setHoveredItem(null));
+                          }}>
+                          <li className={styles.linkNames}>{item.title}</li>
+                          {item.subs && <img src={dropDown} style={navHeadImg} />}
                         </div>
                         {hoveredItem === item.title && item.subs && (
-                            <div className={styles.navSubsGrpShow}    onMouseLeave={() => {
-                                setTimeout(() => {
-                                  setHoveredItem(null);
-                                }, 1000);
-                              }}>
+                            <div className={styles.navSubsGrpShow} 
+                            onMouseLeave={() => {
+                              const id = setTimeout(() => {
+                                setHoveredItem(null);
+                              }, 1000);
+                              setTimeoutId(id);
+                            }}
+                            onMouseOver={() => {
+                              clearTimeout(timeoutId);
+                              setTimeoutId(null);
+                            }}>
                                 {item.subs.map((sub, subIndex) => (
                                 <p key={subIndex} className={styles.navSubs}
                                 style={{
@@ -117,7 +130,7 @@ const Navbar = () => {
 
             <div className={styles.back}>
                 <div className={navShow ? styles.searchContainerActive : styles.searchContainer}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" className="searchc" viewBox="0 0 16 16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" className="searchc" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                   </svg>
                   <input type="text" placeholder="Search Here..." className={styles.searchBox} />
@@ -127,7 +140,7 @@ const Navbar = () => {
         </div>
 
         <div className={navShow ? styles.hideRight : styles.right}>
-            <svg onClick={searchHandler} xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" className={styles.searchIcon} viewBox="0 0 16 16">
+            <svg onClick={searchHandler} xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" className={styles.searchIcon} viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
               {!auth && <button type='button' className={styles.loginBtn} onClick={() =>setModal(true)}>LOG IN</button>}
@@ -135,7 +148,6 @@ const Navbar = () => {
               <button type='button' className={navShow ? styles.closeBtn : styles.closeHidden } onClick={() => setNavShow(false)}>CLOSE</button>
 
               <LogInContext.Provider value={{modal, setModal}}>{modal && <LogIn/>}</LogInContext.Provider>
-
       </div>
     </>
   )

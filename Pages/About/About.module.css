@@ -1,6 +1,5 @@
 body {
     position: relative;
-    /* overflow-y: hidden; */
 }
 
 .header {
@@ -23,7 +22,6 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    /* padding: 0px 10px; */
     height: 100%;
     display: flex;
     transition: 0.1s;
@@ -60,15 +58,12 @@ h1 {
     font-weight: 600;
     letter-spacing: 1.2px;
     padding-bottom: 30px;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.6); */
-    /* border-bottom: 1px solid black; */
     position: relative;
     gap: 80px;
     width: fit-content
 }
 
 .sectionHeading {
-    /* margin-right: 60px; */
     transition: 0.2s;
     font-weight: 700;
 } 
@@ -88,69 +83,9 @@ h1 {
 }
 
 .Boxes {
-    display: flex;
-    justify-content: space-between;
     padding: 50px 160px 80px 160px;
     border-block: 1px solid rgba(0, 0, 0, 0.182);
 }
-
-
-/* .box1,
-.box2,
-.box3,
-.box4 {
-    margin-top: 70px;
-    opacity: 0;
-    transition: 0.8s ease-out;
-} */
-
-
-/* .counter-info {
-    margin-left: 20px;
-    padding-top: 10px;
-} */
-
-/* .numbercounter {
-    font-size: 50px;
-    font-weight: 800;
-} */
-
-/* .boxes-content {
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-    width: 240px;
-} */
-
-/* .boxesImg {
-    width: 282px;
-    height: 210px;
-    object-fit: cover;
-} */
-
-/* .box1 {
-    margin-top: 70px;
-    opacity: 0;
-    transition: 0.8s ease-out;
-}
-
-.box2 {
-    margin-top: 70px;
-    opacity: 0;
-    transition: 0.8s ease-out;
-}
-
-.box3 {
-    margin-top: 70px;
-    opacity: 0;
-    transition: all 0.8s ease-out;
-}
-
-.box4 {
-    margin-top: 70px;
-    opacity: 0;
-    transition: all 0.8s ease-out;
-} */
 
 .Story {
     font-size: 46px;
@@ -165,7 +100,6 @@ h1 {
 }
 
 .chevrons {
-    /* position: absolute; */
     top: 50%;
 }
 
@@ -188,13 +122,6 @@ h1 {
     right: 0px;
     top: 50%;
 }
-
-/* .chevrons img {
-    width: 25px;
-    height: 12px;
-    transform: rotate(270deg);
-} */
-
 
 h3 {
     font-size: 28px;
@@ -279,33 +206,13 @@ footer {
 .timelineBoxIndicatorsGrp {
     position: relative;
     display: flex;
-    padding-left: 82px;
-    margin-right: 100px;
+    margin-inline: auto;
 }
 
 .frameContainer {
     display: flex;
     gap: 24px;
 }
-
-/* .frame {
-    border: 1px solid red;
-    position: absolute; 
-    top: -64px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 16px;
-} */
-
-/* .timelineBox {
-    background-color: black;
-    width: 17px;
-    display: flex;
-    height: 17px;
-    transition: all 0.2s ease;
-} */
 
 .timelineBox.active {
     background-color: #1ce783;
@@ -317,51 +224,16 @@ footer {
     cursor: pointer;
 }
 
-/* .timeboxContainer {
-    position: absolute;
-    align-items: center;
-    display: flex;
-} */
-
-/* .year {
-    padding: 8px 12px;
-    background-color: #555;
-    color: white;
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out;
-} */
-
-/* .yearBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: -40px;
-    visibility: hidden;
-     opacity: 0;
-    transition: all 0.5s ease; 
-} */
-
 .timelineYear {
     color: white;
     padding: 8px 12px;
-    /* background-color: #555; */
     background-color: black;
     border-radius: 4px;
 }
 
-/* .smallTri {
-    width: 0px;
-    height: 0px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 7px solid #555;
-} */
-
 .slides {
     display: flex;
     height: 425px;
-    /* width: 1290px; */
 }
 
 .sliderHeadingGrp {
@@ -398,43 +270,12 @@ footer {
 
 .InactiveSection {
     display: none;
-    /* padding-inline: 160px;
-    padding-bottom: 120px; */
 }
 
 .execHeader {
     font-size: 46px;
     font-weight: 800;
-    /* margin: 80px 0px 40px 0px; */
 }
-
-/* .grid {
-    display: grid;
-    grid-template-columns: 320px 320px 320px 320px;
-    row-gap: 80px;
-    margin-bottom: 120px;
-}
-
-.grid img {
-     width: 290px;
-     height: 400px;
-     object-fit: cover;
-     transition: all 0.2s ease; 
-}
-
-.name {
-    font-size: 24px;
-}
-
-.designation {
-    font-size: 14px;
-    padding-top: 5px;
-    width: 285px;
-}
-
-.grid:hover > :not(:hover) {
-   opacity: 0.7;
-} */
 
 .profile {
     position: relative;
@@ -446,21 +287,6 @@ footer {
     cursor: pointer;
 }
 
-/* button {
-    padding: 7px 28px;
-    background-color: white;
-    color: black;
-    position: absolute;
-    bottom: 106px;
-    border: none;
-    font-weight: 500;
-    font-size: 16px;
-    display: none;
-} */
-
-/* button.active {
-    display: block;
-} */
 
 /*----------- ANIMATION FOR NAVIGATION BAR ----------- */
 

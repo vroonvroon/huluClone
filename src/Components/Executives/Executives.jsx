@@ -18,7 +18,7 @@ const Executives = () => {
       id: 1,
       execName: 'Joe Earley',
       execDesignation: 'President, Direct-to-consumer',
-      profilePic:JoeEarley
+      profilePic: JoeEarley
     },
     {
       id: 2,

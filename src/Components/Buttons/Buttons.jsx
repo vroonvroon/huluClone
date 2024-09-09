@@ -15,10 +15,10 @@ export const PrimaryButton = styled.button`
 export const PressSliderButton = styled.button`
      color: white;
      background-color: transparent;
-     padding: 7px 24px;
+     padding: 7px 30px;
      letter-spacing: 1.5px;
      font-weight: 700;
-     font-size: 14px;
+     font-size: 16px;
      border: 2px solid white;
      margin-top: 30px;
      transition: 0.3s;
@@ -40,20 +40,22 @@ export const SubscriptionHelpArticleButton = styled.button`
     }
 `
 
-export const hamburgerMenuButton = styled.button`
+export const HamburgerMenuButton = styled.button`
     width: 100%;
     padding: 14px 0px;
     border: none;
-    border-radius: 50%;
+    border-radius: 4px;
     background-color: #1ce882; 
-    color: black;
+    color: #1e1d1d;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.7px;
     transition: 0.2s all;
 `
 
 
 export const StudentCTA = styled.button`
-        /* display: inline-block; */
         background-color: rgb(28, 231, 131);
         padding: 16px 24px;
         border: none;
@@ -95,22 +97,12 @@ export const PressLogInButton = styled.button`
 
 export const FXTrialButton = styled.button`
     border: none;
-    padding: 5px 20px;
+    padding: 16px 30px;
     background-color: white;
     color: black;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     border-radius: 5px;
-
-    /* &::before {
-        content: "START YOUR FREE TRAIL";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        color: black;
-      } */
 
     &:hover {
         cursor: pointer;

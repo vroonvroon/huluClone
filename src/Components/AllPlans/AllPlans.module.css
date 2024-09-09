@@ -39,38 +39,35 @@
 
 .gridWindow {
    position: relative;
-   width: fit-content;
-   height: fit-content;
+   width: 100%;
+   height: 100%;
    padding: 4px;
    border: 4px solid #0b0c0f63;
    transition: 0.2s;
 }
 
 .gridImg {
-   height: 427px;
-   width: 279px;
+   height: 100%;
+   width: 100%;
    border-radius: 10px;
    position: relative;
 }
 
 .gridContainer {
-   /* padding: 0px 10px 60px 10px; */
    margin-inline: auto;
-   max-width: 1150px;
+   max-width: 1400px;
 }
 
 .tvLove {
    display: grid;
-   grid-template-columns: 320px 320px 320px 320px;
-   row-gap: 10px;
-   /* max-width: 786px; */
-   /* margin-inline: auto; */
+   grid-template-columns: 350px 350px 350px 350px;
+   column-gap: 20px;
    justify-content: center;
 }
 
 .moreInfo {
-   font-size: 10px;
-   color: white;
+   font-size: 12px;
+   color: rgba(255, 255, 255, 0.523);
    display: flex;
    justify-content: end;
 }
@@ -93,6 +90,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    opacity: 0;
+}
+
+.gridWindow:hover .overlay {
+   opacity: 1;
 }
 
 
@@ -179,8 +181,9 @@
    }
 
    .header {
-      font-size: 32px;
+      font-size: 30px;
       margin-block: 10px;
+      text-align: center;
    }
 
    .headerInfo {
@@ -189,6 +192,7 @@
       letter-spacing: 0;
       padding-top: 0px;
       width: 100vw;
+      padding-inline: 10px;
    }
 
    .gridContainer {
@@ -220,6 +224,13 @@
       font-size: 18px;
       font-weight: 500;
       line-height: 1.2;
+   }
+
+   .moreInfo {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.523);
+      display: flex;
+      justify-content: end;
    }
    
  }

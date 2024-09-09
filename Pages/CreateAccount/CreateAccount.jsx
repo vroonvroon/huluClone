@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, Navigate } from 'react-router-dom'
 import styles from './CreateAccount.module.css'
 import logo from '/src/assets/images/Hulu-Logo.png'
@@ -10,7 +10,6 @@ import Gender from './Dropdowns/Dropdown'
 import Month from './Dropdown/Month'
 import Year from './Dropdown/Year'
 import Days from './Dropdown/Days'
-import userSchema from '../../validations/UserValidation';
 import {toast} from 'react-toastify';
 
 
@@ -37,26 +36,12 @@ const CreateAccount = () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
     console.log("CREATE ACCOUNT - ", user);
     
-     
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
     const [nameError, setNameError] = useState(false);
     const [zipcoderror, setZipcodeError] = useState(false);
     const [activeBtn, setActiveBtn] = useState(false);
     
-
-    const [errors, setErrors] = useState({
-        email: 'Please enter a valid email address',
-        password: 'Please enter a valid password',
-        name: 'Please enter a valid name',
-        birthdate: {
-            month: 'Required',
-            day: 'Required',
-            year: 'Required'
-        },
-        zipcode: 'Please enter a valid zip code',
-        gender: 'Required'
-    });
     
     const handleInput = (e) => {
         setUser({ 
@@ -150,7 +135,6 @@ const CreateAccount = () => {
             } else if(response.status === 400) {
                 toast('User already Exists');
                 console.log('User already exists');
-      
             } else {
                 console.log('An error occurred');
             }
@@ -171,7 +155,7 @@ const CreateAccount = () => {
 
 
     if (storedUser) {
-        return <Navigate to="/" replace />;
+        return <Navigate to="/"/>;
       }
      
 

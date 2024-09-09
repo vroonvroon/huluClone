@@ -7,11 +7,8 @@ const Gender = ({user, setUser}) => {
     
     const [isActive, setIsActive] = useState(false);
     const options= ['Man', 'Woman', 'Non-binary', 'Prefer not to say'];
-    const [genderSetter, setGenderSetter] = useState();
     const [gender, setGender] = useState();
 
-
-    console.log(`Gender component: gender state initialized with ${gender}`); 
 
     const handleSelect = (option) => {
         setUser({
@@ -52,35 +49,13 @@ const Gender = ({user, setUser}) => {
           </div>
         )}
       </div>
-    {/* <div className={styles.mainContainer}>
-        <div name="gender" className={gender ? styles.genderdropdown : styles.genderdropdownError} onClick={(e) => setIsActive(!isActive)}>{gender ? gender : 'Select'}
-                {isActive && (<div className={styles.dropdownContent}>
-                    {options.map((option) => (
-                    <div onClick={() => {
-                        handleSelect(option);
-                        console.log(option);
-                        setGender(option); 
-                        setIsActive(false); 
-                    }} 
-                        className={styles.dropdownItem}> {option} 
-                    </div> 
-                    ))} 
-                </div>
-                )}
-        </div>
-        {!gender && <div className={styles.errorContainer}>
-            <img src={errorIcon} alt="" />
-            <p className={styles.errorText}>Required.</p>
-        </div>}
-    </div> */}
     </>
   )
 };
 
 
-export const Gender2 = ({value, name, user, setUser}) => {
 
-  // console.log(`Gender component: value prop = ${value}`);
+export const Gender2 = ({value, name, user, setUser}) => {
     
   const [isActive, setIsActive] = useState(false);
   const options= ['Man', 'Woman', 'Non-binary', 'Prefer not to say'];
@@ -114,7 +89,6 @@ return (
                   console.log(option);
                   setGender(option); 
                   setTimeout(() => setIsActive(false), 100);
-                  // setIsActive(false); 
               }}
               className={styles.dropdownItem}
             >

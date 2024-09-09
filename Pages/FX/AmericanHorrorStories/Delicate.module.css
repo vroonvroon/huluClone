@@ -1,6 +1,6 @@
 .heroSectionContainer {
     position: relative;
-    height: 680px;
+    height: 750px;
     width: 100%;
 }
 
@@ -86,13 +86,14 @@
     position: absolute;
     width: 100%;
     bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.288);
+    background-color: rgba(0, 0, 0, 0.603);
     padding: 25px 40px;
 }
 
 .context {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .blackLayer {
@@ -105,17 +106,17 @@
 
 .navigationalheaders {
     display: flex;
-    padding: 20px 40px;
     border-bottom: 3px solid rgb(235, 235, 235);
     position: relative;
 }
 
-.navigationalheaders>p {
+.navigationalheaders > p {
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    margin-right: 40px;
+    margin-inline: 40px;
     cursor: pointer;
+    padding-block: 30px;
 }
 
 .bluIndicator {
@@ -123,6 +124,7 @@
     width: 75px;
     position: absolute;
     bottom: 0px;
+    left: 40px;
     background-color: dodgerblue;
     transition: left 0.4s, width 0.4s;
 }
@@ -193,105 +195,70 @@
     font-size: 14px;
 }
 
-
-.youmaylikesectioncontainer {
+.windows {
     display: flex;
-} 
+    justify-content: space-between;
+    padding: 0px 40px 0px 40px;
+    gap: 17px;
+    transition: opacity 0.5s ease-in-out; 
+    opacity: 1; 
+}
 
-.moreWindow {
+.inactive {
+    opacity: 0; 
+}
+
+.verticalscroll {
+    position: relative;
+    background-color: white;
     display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.likecard {
-    width: auto;
-    height: auto;
-    padding-inline: 10px;
+.scrollWindows {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.scrollwindow {
+    height: fit-content;
     position: relative;
+    margin-inline: 8px;
+    margin-block: 35px;
 }
 
-.cubuttondetail {
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.3s linear;
-}
-
-.cubuttondetailActive {
-    position: absolute;
-    z-index: 1;
-    opacity: 1;
-    transition: all 0.3s linear;
-}
-
-.moreimgContainer {
-    width: 268px;
-    height: 150px;
-    border-radius: 12px;
-    position: relative;
-    display: grid;
-    place-items: center;
-    outline-offset: 4px;
-    transition: all 0.2s linear;
-}
-
-.moreimgContainerActive {
-    width: 268px;
-    height: 150px;
-    border-radius: 12px;
-    position: relative;
-    display: grid;
-    place-items: center;
-    outline: 4px solid #9f9e9e;
-    transition: all 0.2s linear;
-    outline-offset: 4px;
-    box-shadow: 2px 3px 3px 5px rgba(0, 0, 0, 0.078);
-}
-
-.backdrop {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.324);
-    border-radius: 12px;
-    opacity: 0;
-    transition: all 0.2s linear;
-}
-
-.backdropActive {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.324);
-    border-radius: 12px;
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
-}
-
-.moretitle {
-    font-size: 14px;
-    font-weight: 700;
+.scrollwindow:hover {
+     padding: 4px solid white;
+     border-radius: 10px;
+     outline: 4px solid gray;
+     outline-offset: 4px;
+     transition: transform .1s ease;
+     box-shadow: 2px 15px 30px 20px rgba(0, 0, 0, 0.2);
 }
 
 .scrollbuttonl {
     position: absolute;
-    top: 50%;
-    width: 48px;
-    height: 48px;
+    top: 40%;
+    width: 56px;
+    height: 56px;
     z-index: 200;
-    margin-left: 57px;
+    margin-left: 15px;
     display: block;
     filter: drop-shadow( -1px 3px 6px rgba(0, 0, 0, .2));
+    cursor: pointer;
 }
 
 .scrollbuttonr {
-    width: 48px;
-    height: 48px;
-    margin-right: 57px;
+    width: 56px;
+    height: 56px;
+    margin-right: 15px;
     position: absolute;
     right: 0px !important;
-    top: 50%;
+    top: 40%;
     z-index: 200;
     filter: drop-shadow( -1px -3px 6px rgba(0, 0, 0, .2));
+    cursor: pointer;
 }
 
 
@@ -301,16 +268,12 @@
 }
 
 
-
-
 /* /// SECTION3 SETTINGS /// */
 
 .container4 {
-    /* margin-inline: 271px;   */
-    /* margin-inline: 300px;  */
     color: #272c34;    
     MARGIN: 0PX AUTO;
-    max-width: 984px;
+    max-width: 1010px;
 }    
 
 .section4header {
@@ -352,7 +315,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 4px;
-    /* position: relative; */
 }
 
 .switchTextgrp {
@@ -364,7 +326,6 @@
 
 .tabswitchChanger {
    display: flex;
-   /* background-color: #f9f9fa; */
    position: relative;
    padding: 8px 14px;
    height: 40px;
@@ -395,21 +356,22 @@
    justify-content: space-between;
    border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
    border-top: 0.2px solid rgba(200, 200, 200, 0.4);
-   padding-block: 30px;
    position: sticky;
    top: 0px;
    background-color: #fff;
    z-index: 200;
-   /* position: relative; */
+   gap: 10px;
 }
 
 .basePlan {
-  font-weight: 700; 
+  font-weight: 500; 
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
 .bundleSave {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .bundleSaveCont img {
@@ -419,7 +381,7 @@
 .planchangerToggler {
     visibility: visible;
     display: flex;
-    padding: 0px 80px;
+    min-width: fit-content;
 }
 
 .plansRight {
@@ -443,8 +405,13 @@
    cursor: pointer;
 }
 
-.background.active {
+.backgroundActive {
    background-color: #00ED82;
+   width: 56px;
+   height: 30px;
+   display: inline-block;
+   border-radius: 50px;
+   cursor: pointer;
 }
 
 .button {
@@ -457,12 +424,22 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
-  box-shadow: 0px 1px 4px 0px;
+  box-shadow: 0px 1px 4px 0px #ababab;
+  transition: all 0.2s ease-in-out;
 }
 
-.button.active {
-  left: 30px;
-  cursor: pointer;
+.buttonActive {
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    background-color: #fff;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    left: 25px;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px 0px #ababab;
+    transition: all 0.2s ease-in-out;
 }
 
 .plansButton {
@@ -491,7 +468,6 @@ border-radius: 40px;
 display: flex;
 align-items: center;
 position: relative;
-/* display: none; */
 }
 
 .plansDetails2 {
@@ -553,16 +529,16 @@ justify-content: baseline;
 }
 
 .plans2Img {
-margin-bottom: 26px;
+    margin-bottom: 26px;
 }
 
 .planchanger {
-display: none;
+    display: none;
 }
 
 .plancards {
-display: none;
-gap: 1rem;
+    display: none;
+    gap: 1rem;
 }
 
 .plancardActive {
@@ -570,8 +546,11 @@ gap: 1rem;
   gap: 1rem;
 }
 
-.plancards2,
-.plancards3 {
+.plancard2Active {
+  display: flex; 
+}
+
+.plancards2 {
   display: none;
 }
 
@@ -717,7 +696,6 @@ justify-content: center;
 .moreInfo4 {
    text-align: left;
    padding: 10px 8px 30px 8px;
-   /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
    letter-spacing: 0.5px;
    line-height: 15px;
 }
@@ -725,7 +703,6 @@ justify-content: center;
 .moreInfo43 {
   text-align: left;
   padding: 10px 8px 30px 8px;
-  /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
   letter-spacing: 0.5px;
   line-height: 15px;
 }
@@ -744,15 +721,11 @@ justify-content: center;
     overflow: hidden;
     max-height: 0px;
     transition: all .5s ease;
-    /* margin-inline: 300px;  */
-    /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
 }
 
 .addOnsActive {
   overflow: visible;
   max-height: fit-content;
-  /* margin-inline: 300px;  */
-  /* border-bottom: 0.2px solid rgba(200, 200, 200, 0.4); */
 }
 
 .addonHeader {
@@ -868,314 +841,59 @@ justify-content: center;
 }
 
 
-
-
-
-
-
-
-/* .back {
-   background-color: #272c34;
-}
-
-.heroSectionContainer {
-}
-  
-.heroBanner {
-    top: 50px;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center
-}
-
-.hero {
-    width: 100%;
-    object-fit: cover;
-    height: 720px;
-}
-
-.overlay {
-    position: absolute;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
-    top: 0px;
-}
-
-.CTAButtons {
-    display: flex;
-    align-items: center;
-}
-
-.nav {
-      display: flex;
-      justify-content: space-between;
-      background: transparent;
-      top: 0px;
-      padding: 10px 40px;
-      align-items: center;
-      height: 74px;
-      position: fixed;
-      z-index: 500;
-      transition: .2s ease;
-    }
-
-.navActive {
-    background-color: rgb(246, 247, 248);
-}
-
-.logo {
-    width: 5.5%;
-}
-
-.header {
-    font-size: 48px;
-    font-weight: bold;
-    color: #272c34;
-    width: 615px;
-    margin-block: 24px;
-    text-align: center;
-    line-height: 55px;
-}
-
-.green {
-    color: rgb(28, 231, 131);
-}
-
-.packageintro {
-    width: 100%;
-    position: absolute;
-    align-items: center;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-}
-
-.heroOverlay {
-    background: linear-gradient(to bottom, black, lch(0 0 0 / 0));
-    position: absolute;
-    width: 100%;
-    height: 174px;
-    top: 0px;
-    left: 0px;
-}
-
-.verticalscroll {
+/* // DELICATE (SERIES PAGE) SETTINGS // */
+.seriesimgContainer {
+    width: 252px;
+    height: 142px;
+    border-radius: 12px;
     position: relative;
-    background-color: #272c34;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-
-.scrollwindow{
-    height: fit-content;
-    position: relative;
-    margin-inline: 8px;
-    margin-block: 35px;
-}
-
-.scrollwindow:hover {
-     padding: 4px solid white;
-     border-radius: 10px;
-     outline: 4px solid gray;
-     outline-offset: 4px;
-     transition: transform .1s ease;
-     box-shadow: 2px 15px 30px 20px rgba(0, 0, 0, 0.2);
-}
-
-.scrollbuttonl {
-    position: absolute;
-    top: 50%;
-    width: 48px;
-    height: 48px;
-    z-index: 200;
-    margin-left: 57px;
-    display: block;
-    filter: drop-shadow( -1px 3px 6px rgba(0, 0, 0, .2));
-}
-
-.scrollbuttonr {
-    width: 48px;
-    height: 48px;
-    margin-right: 57px;
-    position: absolute;
-    right: 0px !important;
-    top: 50%;
-    z-index: 200;
-    filter: drop-shadow( -1px -3px 6px rgba(0, 0, 0, .2));
-}
-
-
-.scrollbuttonl:active,
-.scrollbuttonr:active {
-    transform: translateY(2px);
-}
-
-.windowtitle {
-    position: absolute;
-    bottom: 5px;
-}
-
-.grid {
     display: grid;
-    grid-template-columns: 295px 295px 295px 295px;
-    column-gap: 1rem;
-    padding-inline: 40px;
-    place-content: center;
-}
-
-.cont {
-    width: 100%;
-    padding: 50px 0px 100px 0px;
-    background-color: #0b0c0f;
-    color: #272c34;
-}
-
-.containerText {
-    width: 800px;
-    margin: 10px auto;
-    text-align: center;
-    padding: 20px 0px 50px 0px;
-}
-
-.grid1, .grid2, .grid3, .grid4 {
-     position: relative;
-}
-
-.watchpHeader {
-    font-size: 32px;
-    font-weight: 700;
-    color: #272c34;
-    margin-bottom: 20px;
-}
-
-.footer {
-    background-color: rgb(232, 234, 237);
-    width: 100%;
-    padding: 60px 0px 60px 170px;
-    box-sizing: border-box;
-}
-
-.quickLinks {
-    display: flex;
-    font-size: 14px;
-    color: rgb(88, 97, 116);
-    padding-bottom: 86px;
-    border-bottom: 0.2px solid rgba(200, 200, 200, 0.4);
-}
-
-.quickLinks p {
+    place-items: center;
+    outline-offset: 4px;
+    transition: all 0.3s linear;
+    cursor: pointer;
     margin-bottom: 10px;
 }
 
-.socialMediaSection {
-    padding-top: 32px;
-}
-
-.socialMedia img {
-    padding-right: 32px;
-}
-
-.extraLinks {
-    display: flex;
-    padding-top: 36px;
-    font-size: 13px;
-    color: rgb(88, 97, 116);
-}
-
-.extraLinks p {
-    padding-right: 32px;
-    display: flex;
-    align-items: center;
-}
-
-.aboutAds::before {
-    content: '';
-    background: url(images/about-ads.svg);
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background-size: contain;
-    margin-right: 2px;
-}
-
-.scrollwindowAll {
-    margin-inline: auto;
-    padding-inline: 30px;
-}
-
-.scrollwindowAll::-webkit-scrollbar {
-    display: none;
-}
-
-.scrollWindows {
-    display: flex;
-    transform: translate(0px);
-    transition: all 0.4s ease-out;
-}
-
-.windows {
-    display: flex;
-    padding-inline: 50px;
-}
-
-.window2 {
-    opacity: 1;
-}
-
-.bgColorContainer {
-    background-color: #272c34;
-    padding-block: 20px;
-}
-
-
-.seriesDropdown {
-    cursor: pointer;
-}
-
-.americanHorrorStoriesgrid {
+/* // DELICATE (EXTRA PAGE) SETTINGS // */
+.delicateimgContainer {
+    width: 252px;
+    height: 142px;
+    border-radius: 12px;
     position: relative;
+    display: grid;
+    place-items: center;
+    outline-offset: 4px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.delicateWindow, .NYCWindow {
-    display: flex;
-    position: absolute;
+.delicateimgContainerActive {
+    width: 252px;
+    height: 142px;
+    border-radius: 12px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    outline: 4px solid #9f9e9e;
+    transition: all 0.3s linear;
+    outline-offset: 4px;
+    box-shadow: 2px 3px 3px 5px rgba(0, 0, 0, 0.078);
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.card {
+.extraCard {
     width: auto;
     height: auto;
     padding-inline: 10px;
-}
-
-.imgContainer {
-    width: 268px;
-    height: 150px;
-    border-radius: 12px;
     position: relative;
+    margin-bottom: 90px;
 }
 
-.thumbnail {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
+.extratitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
 }
-
-.fxlogo {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-}
-
-
-.youmaylikesectioncontainer {
-    display: flex;
-} */

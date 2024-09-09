@@ -8,13 +8,12 @@ import LatestCards from '../../src/Components/LatestSectionCards/LatestCards'
 import OriginalsCard from '../../src/Components/OriginalsCard/OriginalsCard'
 import HuluPressCarousel from '../../src/Components/HuluPressCarousel/HuluPressCarousel'
 
-
 export const ModalContext = createContext();
 
 
 const HuluPress = () => {
   
-    const [modal, setModal] = useState(true);
+    const [modal, setModal] = useState(false);
     const [show, setShow] = useState(false);
 
     const showHandler = () => {
@@ -40,11 +39,11 @@ const HuluPress = () => {
 
     // FOR ORIGINALS SCROLLER 
     const originalScroller = useRef();
-    let scrollPositionOriginal = 0
+    let [scrollPositionOriginal, setScrollPositionOriginal] = useState(0);
 
     const slideForward = () => {
         if(scrollPositionOriginal < 0) {
-            scrollPositionOriginal += 12.5
+            setScrollPositionOriginal(scrollPositionOriginal += 12.5)
         } 
         originalScroller.current.style.transform = `translateX(${scrollPositionOriginal}%)`
     }
@@ -97,13 +96,13 @@ const HuluPress = () => {
 
         <div className={styles.originalCarousel}>
 
-        <svg onClick={slideForward} className={styles.arrowLeft2} xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd" transform="matrix(-1 0 0 1 46 0)"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
+       <svg onClick={slideForward} className={styles.arrowLeft2} xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd" transform="matrix(-1 0 0 1 46 0)"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
 
         <div className={styles.originalScroller} ref={originalScroller}>
-                <OriginalsCard />
+            <OriginalsCard />
         </div>
 
-        <svg onClick={slideBackward} className={styles.arrowRight2} xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
+        <svg onClick={slideBackward} className={styles.arrowRight2} xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
         
         </div>
 
@@ -123,13 +122,13 @@ const HuluPress = () => {
     
             <div className={styles.latestnewsCarousel}>
 
-            <svg onClick={slideFront} className={styles.arrowLeft3} xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd" transform="matrix(-1 0 0 1 46 0)"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
+            <svg onClick={slideFront} className={styles.arrowLeft3} xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd" transform="matrix(-1 0 0 1 46 0)"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
             
             <div className={styles.latestScroller} ref={latestScroller}>
                <LatestCards />
             </div>
 
-            <svg onClick={slideBack} className={styles.arrowRight3} xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
+            <svg onClick={slideBack} className={styles.arrowRight3} xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 46 46"><g fill="none" fillRule="evenodd"><path fill="#FFF" d="M23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 Z M21.7692308,13 L19,15.9032258 L25.7692308,22.6774194 L19,30.0967742 L21.7692308,33 L31,22.6774194 L21.7692308,13 Z" opacity=".8"></path><polygon fill="#151515" points="0 2.903 2.925 0 12.675 9.677 2.925 20 0 17.097 7.15 9.677" transform="translate(19 13)"></polygon></g></svg>
             </div>
     
         </div>
@@ -140,15 +139,6 @@ const HuluPress = () => {
         <SmallFooter />
 
                         {/* FOOTER  ENDS*/}
-
-                        {/* SCROLL TO TOP FLOAT BUTTON */}
-{/* 
-        <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style={{transition: 'strokeDashoffset 10ms linear 0s', strokeDasharray: '307.919, 307.919', strokeDashoffset: '21.2863'}}></path>
-	   </svg> */}
-
-        
-
 
     </>
   )

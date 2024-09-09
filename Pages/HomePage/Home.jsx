@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import hero from '/src/assets/images/original.jpg'
 import logo from '/src/assets/images/Hulu-Logo.png'
@@ -22,9 +21,8 @@ import Features2 from '../../src/Components/FeaturesList2/Features2'
 import Features3 from '../../src/Components/FeaturesList3/Features3'
 import SlidesNew from '../../src/Components/Slides/SlidesNew'
 import Logout from '../../src/Components/Logout/Logout'
-import { useMediaQuery } from 'react-responsive';
 import LogIn from '../../src/Components/LogInModal/LogIn'
-
+import { HamburgerMenuButton } from '../../src/Components/Buttons/Buttons'
 
 
 
@@ -114,33 +112,42 @@ const toggleHamburger = () => setHMenu(!hmenu);
 
 
 const [showButton, setShowButton] = useState(false);
-
+const [mobileButton, setMobileButton] = useState(false);
 const smallScreenButtonContainer = useRef(null);
 
   
 useEffect(() => {
-      const mediaQuery = window.matchMedia('(min-width: 320px) and (max-width: 1000px)');
-        const handleScroll = () => {
-          if (window.scrollY >= 4400 && window.scrollY < 900) {
-            setShowButton(false);
-          }
-          else {
-            setShowButton(true);
-          };
+    const handleResize = () => {
+      if (window.innerWidth <= 425) {
+        setMobileButton(true);
+        setShowButton(true);
+      } else {
+        setMobileButton(false);
+        setShowButton(false);
       }
+    }
 
-       if (mediaQuery.matches) {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (window.scrollY >= 220 && window.scrollY <= 4200) {
+        setShowButton(true);
+      }
+      else {
+        setShowButton(false);
+      }
     };
-  }
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('scroll', handleScroll);
+      } 
 }, []);
   
 
- 
 const [auth, setAuth] = useState(localStorage.getItem('user'));
-
 
 
 useEffect(() => {
@@ -152,7 +159,6 @@ useEffect(() => {
     window.removeEventListener('storage', handleStorageChange);
   };
 }, []);
-
 
 
 
@@ -170,20 +176,13 @@ useEffect(() => {
     <div className={styles.navheroContainer}>
       <div className={styles.nav}>
         <img src={logo} className={styles.logo}/>
-          {/* {auth ? <Logout setAuth={setAuth}/> : <Link to='/login'>LOG IN</Link>} */}
       {auth ? (
         <Logout setAuth={setAuth} />
       ) : (
         <div>
-          <p
-            onClick={() => setShowLogin(true)}
-            className={styles.loginText}
-          >
+          <p className={styles.loginText}>
             LOG IN
           </p>
-          {/* {showLogin && (
-            <LogInContext.Provider value={{showLogin, setShowLogin}}><LogIn /></LogInContext.Provider>)} */}
-            <LogInContext.Provider value={{ setLoginModal }}>{showLogin && <LogIn />}</LogInContext.Provider>
         </div>
       )}
 
@@ -197,8 +196,8 @@ useEffect(() => {
 
             {hmenu && <div className={styles.expandedMenu}>
                 <p className={styles.expandedMenuText}>Get the Hulu app</p>
-                <p className={styles.expandedMenuText}>LOG IN</p>
-                <hamburgerMenuButton>SIGN UP NOW</hamburgerMenuButton>
+                <p className={styles.expandedMenuLog}>LOG IN</p>
+                <HamburgerMenuButton>SIGN UP NOW</HamburgerMenuButton>
             </div>}
           </div>
 
@@ -273,9 +272,6 @@ useEffect(() => {
           <div className={styles.header}>Live TV Makes It Better</div>
           <div className={styles.headerInfo2}>Get 95+ top channels on Hulu (With Ads) + Live TV with your favorite live sports, news, and events - plus the entire Hulu streaming library. With Unlimited DVR, store Live TV recordings for up to nine months and fast-forward through your DVR content. Access endless entertainment with Disney+ and live sports with ESPN+.
           </div>
-          {/* <div className="limited-time">
-            <p>For a limited time, get Hulu + Live TV for $49.99/month for 3 months.*</p>
-          </div> */}
             <span className={styles.limitedTimeBtn}>GET HULU + LIVE TV</span>
         </div>
       
@@ -290,159 +286,126 @@ useEffect(() => {
     </div>
     
 
-                                {/* <!-- SECTION3 STARTS HERE --> */}
-                                            
-    {/* <div className={styles.section3}> */}
-       {/* <Slides />  */}
+                                {/* <!-- SECTION3 STARTS HERE --> */}                       
 
        <SlidesNew />
 
-    {/* <div className={styles.sliderContainer_ContentGrp}>
-    
-    </div> */}
-    {/* </div> */}
-  
-
                                 {/* <!-- SELECT PLAN SECTION STARTS HERE --> */}
 
-<div className={styles.container4} ref={container4}>
-      <div className={styles.headerSection}>
-        <div className={styles.section4header}>Select Your Plan</div>
-        <h3 className={styles.headerInfo4} style={{fontSize: '18px', marginBottom: '4px'}}>No hidden fees, equipment rentals, or installation appointments.</h3>
-        <h3 style={{fontSize: '18px', fontWeight: '700'}}>Switch plans or cancel anytime.**</h3>
-      </div>
+    <div className={styles.container4} ref={container4}>
 
-    <div className={styles.planChangerMainContainer}>
-        <div className={styles.tabswitcherContainer}>
-          
-          <div className={styles.switchTextgrp} onClick={() => setActiveTab(1)}>
-            <span className={activeTab === 1 ? styles.tabActive : styles.tabswitchChanger}>Hulu</span>
+          <div className={styles.headerSection}>
+            <div className={styles.section4header}>Select Your Plan</div>
+            <h3 className={styles.headerInfo4}>No hidden fees, equipment rentals, or installation appointments.</h3>
+            <h3 className={styles.switchorcancel}>Switch plans or cancel anytime.**</h3>
           </div>
 
-          <div className={styles.switchTextgrp} onClick={() => setActiveTab(2)}>
-            <span className={activeTab === 2 ? styles.tabActive : styles.tabswitchChanger}>Disney Bundle</span>
-          </div>
+        <div className={styles.planChangerMainContainer}>
+            <div className={styles.tabswitcherContainer}>
+              
+              <div className={styles.switchTextgrp} onClick={() => setActiveTab(1)}>
+                <span className={activeTab === 1 ? styles.tabActive : styles.tabswitchChanger}>Hulu</span>
+              </div>
 
-          <div className={styles.switchTextgrp} onClick={() => setActiveTab(3)}>
-            <span className={activeTab === 3 ? styles.tabActive : styles.tabswitchChanger}>Live TV</span>
-          </div>
+              <div className={styles.switchTextgrp} onClick={() => setActiveTab(2)}>
+                <span className={activeTab === 2 ? styles.tabActive : styles.tabswitchChanger}>Disney Bundle</span>
+              </div>
 
-        </div>
-    </div>
+              <div className={styles.switchTextgrp} onClick={() => setActiveTab(3)}>
+                <span className={activeTab === 3 ? styles.tabActive : styles.tabswitchChanger}>Live TV</span>
+              </div>
 
-    <div className={styles.planchangeContainer}>
-        <div className={styles.planchangerToggler}>
-        <div className={styles.basePlanCont} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-          <p className={styles.basePlan}>BASE PLANS</p>
-          <img src="/images/Hulu-Logo.png" style={{width: '47px'}} />
-        </div>
-          <div className={styles.toggleButton}>
-            <span className={styles.background}></span>
-            <span className={styles.button}></span>
-          </div>
-          <div className={styles.bundleSaveCont}>
-            <p className={styles.bundleSave}>BUNDLE / SAVE</p>
-            <img src="/images/bundles-white.svg" />
-          </div>
+            </div>
         </div>
 
+        <div className={styles.planchangeContainer}>
+          <div className={styles.allCards}>
+              {/* <!------ CARD1 FOR BUNDLE / SAVE SIDE -------> */}
+            <div className={`align-items-end ${showPlan1 ? styles.plancardActive : styles.plancards}`}>
+              <WelcomePlansCard logo={logo} trial='30 DAY FREE TRIAL' ads='With Ads' price='$7.99 / MONTH' price2='$7.99 / Mo.' popular={true}/>
+              <WelcomePlansCard logo={logo} trial='30 DAY FREE TRIAL' ads='No Ads' price='$17.99 / MONTH' price2='$17.99 / Mo.' popular={false}/>
+            </div>
 
-  
+            {/* <!------ CARD2 FOR BUNDLE / SAVE SIDE -------> */}
+            <div className={`align-items-end ${showPlan2 ? styles.plancardActive : styles.plancards}`}>
+              <WelcomePlansCard2 logo={disneylogo} savings='SAVE 37%' planName= 'Duo Basic' ads='With Ads' price='$9.99 / MONTH'  price2='$9.99/Mo.' popular={false}/>
+              <WelcomePlansCard2 logo={disneyesspnlogo} savings='SAVE 44%' planName= 'Trio Basic' ads='With Ads' price='$14.99 / MONTH' price2='$14.99/Mo.' popular={true}/>
+              <WelcomePlansCard2 logo={disneyesspnlogo} savings='SAVE 41%' planName= 'Trio Premium' ads='No Ads (Disney+ & Hulu)' price='$24.99 / MONTH' price2='$24.99/Mo.' popular={false}/>
+            </div>
 
-  <div className={styles.allCards}>
-      {/* <!------ CARD1 FOR BUNDLE / SAVE SIDE -------> */}
-    <div className={`align-items-end ${showPlan1 ? styles.plancardActive : styles.plancards}`}>
-      <WelcomePlansCard logo={logo} trial='30 DAY FREE TRIAL' ads='With Ads' price='$7.99 / MONTH' price2='$7.99 / Mo.' popular={true}/>
-      <WelcomePlansCard logo={logo} trial='30 DAY FREE TRIAL' ads='No Ads' price='$17.99 / MONTH' price2='$17.99 / Mo.' popular={false}/>
+            {/* <!------ CARD3 FOR BUNDLE / SAVE SIDE -------> */}
+            <div className={`align-items-end ${showPlan3 ? styles.plancardActive : styles.plancards}`}>
+              <WelcomePlansCard trial='INCLUDES DISNEY+ & ESPN+' ads='With Ads' price='$76.99 / MONTH' price2='$76.99/Mo.' popular={true}/>
+              <WelcomePlansCard trial='INCLUDES DISNEY+ & ESPN+' ads='No Ads (Disney+ & Hulu)' price='$89.99 / MONTH' price2='$89.99/Mo.' popular={false}/>
+            </div>
+          </div>
+        </div> 
+
+
+        {/* <!--------- // FEATURES // ----------> */}
+        
+        <div className="allFeatures">
+          <div className={showFeatures1 ? styles.featuresActive : styles.features}>
+            <Features /> 
+          </div>
+
+        {/* THIS IS THE SECOND FEATURES  */}
+          {showFeatures2 && <div className={styles.featuresActive}>
+            <Features2 />
+          </div>}
+
+        {/* THIS IS THE 3RD FEATURE SECTION */}
+          {showFeatures3 && <div className={styles.featuresActive}> 
+            <Features3 />
+          </div>}
+        </div>
+
+
+                                  {/* <!-- BUNDLE / SAVE SECTION WITH FEATURES  --> */}
+
+
+                    {/* <!-- ADD ONS  --> */}
+
+        <div className='mt-5'>
+          {show && <div className={`${styles.addOns} ${styles.addOnsActive}`}>
+            <div className={styles.addonHContainer}>
+              <span className={styles.addonHeader}>Available Add-ons</span>
+                <div className={styles.addOnsInnerText}>
+                  <span className={styles.addonSubheader}>Add-ons available at an additional cost.</span>
+                  <span className={styles.addonSubheader}>Add them up after you sign up for Hulu.</span>
+                </div>
+            </div>
+
+
+                {/* OPTIONS 1  */}
+          <div className={showAddons1 ? styles.optionsActive : styles.options}>
+            <AddOns />
+          </div>
+              {/* OPTIONS 1 ENDS*/}
+
+
+              {/* OPTIONS 2 STARTS */}
+          <div className={showAddons2 ? styles.optionsActive : styles.options}>
+            <AddOns2 />
+          </div>
+              {/* OPTIONS 2 ENDS */}
+
+
+              {/* OPTIONS 3 STARTS*/}
+          <div className={showAddons3 ? styles.optionsActive : styles.options}>
+            <AddOns />
+          </div>
+              {/* OPTIONS 3 ENDS*/}     
+
+          </div>}
+
+          <div className={styles.showAddOns} id={styles.showBtn} onClick={toggleAddons}>
+              {show ? <p style={{color: 'white', marginRight: '10px', paddingBlock: '24px', fontSize: '17px', alignItems: 'center'}} id="text">Hide Add-ons</p> : <p style={{color: 'white', marginRight: '10px', paddingBlock: '24px', fontSize: '17px', alignItems: 'center'}} id="text">Show Add-ons</p>}
+              {show ? <img src={DownArrow} style={{width: "26px", height: "14px", transform: 'rotate(180deg)'}} id="chev" /> : <img src={DownArrow} style={{width: "26px", height: "14px" }} id="chev" />}
+          </div>
+        </div>
+
     </div>
-
-    {/* <!------ CARD2 FOR BUNDLE / SAVE SIDE -------> */}
-    <div className={`align-items-end ${showPlan2 ? styles.plancardActive : styles.plancards}`}>
-       <WelcomePlansCard2 logo={disneylogo} savings='SAVE 37%' planName= 'Duo Basic' ads='With Ads' price='$9.99 / MONTH' popular={false}/>
-       <WelcomePlansCard2 logo={disneyesspnlogo} savings='SAVE 44%' planName= 'Trio Basic' ads='With Ads' price='$14.99 / MONTH' popular={true}/>
-       <WelcomePlansCard2 logo={disneyesspnlogo} savings='SAVE 41%' planName= 'Trio Premium' ads='No Ads (Disney+ & Hulu)' price='$24.99 / MONTH' popular={false}/>
-    </div>
-
-    {/* <!------ CARD3 FOR BUNDLE / SAVE SIDE -------> */}
-    <div className={`align-items-end ${showPlan3 ? styles.plancardActive : styles.plancards}`}>
-      <WelcomePlansCard trial='INCLUDES DISNEY+ & ESPN+' ads='With Ads' price='$76.99 / MONTH' popular={true}/>
-      <WelcomePlansCard trial='INCLUDES DISNEY+ & ESPN+' ads='No Ads (Disney+ & Hulu)' price='$89.99 / MONTH' popular={false}/>
-    </div>
-  </div>
-
-    </div> 
-
-    {/* <!--------- // FEATURES // ----------> */}
-    
-
-    <div className="allFeatures">
-
-      <div className={showFeatures1 ? styles.featuresActive : styles.features}>
-      <Features /> 
-    </div>
-
-
-    {/* THIS IS THE SECOND FEATURES  */}
-      {showFeatures2 && <div className={styles.featuresActive}>
-        <Features2 />
-      </div>}
-
-
-       {/* THIS IS THE 3RD FEATURE SECTION */}
-
-     {showFeatures3 && <div className={styles.featuresActive}> 
-        <Features3 />
-      </div>}
-
-    </div>
-
-
-                              {/* <!-- BUNDLE / SAVE SECTION WITH FEATURES  --> */}
-
-
-                {/* <!-- ADD ONS  --> */}
-
-<div className='mt-5'>
-{show && <div className={`${styles.addOns} ${styles.addOnsActive}`}>
-<div className={styles.addonHContainer}>
-  <span className={styles.addonHeader}>Available Add-ons</span>
-  <div className={styles.addOnsInnerText}>
-    <span className={styles.addonSubheader}>Add-ons available at an additional cost.</span>
-    <span className={styles.addonSubheader}>Add them up after you sign up for Hulu.</span>
-  </div>
-</div>
-
-
-      {/* OPTIONS 1  */}
-<div className={showAddons1 ? styles.optionsActive : styles.options}>
-  <AddOns />
-</div>
-    {/* OPTIONS 1 ENDS*/}
-
-
-    {/* OPTIONS 2 STARTS */}
-<div className={showAddons2 ? styles.optionsActive : styles.options}>
-  <AddOns2 />
-</div>
-    {/* OPTIONS 2 ENDS */}
-
-
-    {/* OPTIONS 3 STARTS*/}
-<div className={showAddons3 ? styles.optionsActive : styles.options}>
-  <AddOns />
-</div>
-    {/* OPTIONS 3 ENDS*/}     
-
-</div>}
-
-<div className={styles.showAddOns} id={styles.showBtn} onClick={toggleAddons}>
-    {<p style={{color: 'white', marginRight: '10px', paddingBlock: '24px', fontSize: '17px', alignItems: 'center'}} id="text">Show Add-ons</p>}
-    {show ? <img src={DownArrow} style={{width: "26px", height: "14px", transform: 'rotate(180deg)'}} id="chev" /> : <img src={DownArrow} style={{width: "26px", height: "14px" }} id="chev" />}
-</div>
-</div>
-
-
-</div>
 
     {/* FOOTER*/}
     <Footer /> 
